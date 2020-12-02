@@ -2,7 +2,7 @@
 
 Dans ce cours on va apprendre à **mettre en place un projet de jeu** pour une **game jam** selon les méthodes que j'applique dans ce type de projet. 
 
-Ce guide vise à préparer **un projet capable de gagner**, ou pour au moins être **parmi les jeux les plus joués**, donc recevant plus de retours des joueurs, et donc j'en suis convaincu, **des jeux à partir desquels ont apprend plus**.
+Ce guide vise à préparer **un projet capable de gagner**, ou pour au moins être **parmi les jeux les plus joués**, donc recevant plus de retours des joueurs, et donc j'en suis convaincu, **des jeux à partir desquels on apprend beaucoup**.
 
 Mais mes conseils ne sont pas une loi absolue. Chacun son style et **n'oubliez pas de vous amuser en faisant des jeux !**
 

@@ -6,6 +6,24 @@ Ce guide vise à préparer **un projet capable de gagner**, ou pour au moins êt
 
 Mais mes conseils ne sont pas une loi absolue. Chacun son style et **n'oubliez pas de vous amuser en faisant des jeux !**
 
+```
++----------------PLAN----------------+
+|- Présentation                      |
+|  - Préprod ?                       |
+|  - Game jam ?                      |
+|  - Scénario                        |
+|- Trouver l'idée                    |
+|  - Evaluer le temps                |
+|  - Trouver le gameplay             |
+|  - Trouver le style graphique      |
+|- Commencer à prototyper            |
+|  - Choix du moteur                 |
+|  - Les graphismes                  |
+|  - Tester son prototype            |
+|- Conseils pour la suite            |
++------------------------------------+
+```
+
 # Présentation
 
 ## La préproduction ?
@@ -36,7 +54,7 @@ Ici on prendra le contexte d'une game jam pour ne pas perdre trop de temps, mais
 
 Ici on va partir du principe que vous participez à une **game jam** sur le site **[Itch.io](https://itch.io)** ayant pour **thème "Rise and Fall"** et commme durée **un mois**.
 
-# Trouver l'idée
+# Trouver une idée
 
 Trouver une idée de jeu, c'est très difficile. **Il faut beaucoup d'expérience** pour avoir l'idée qui va vraiment bien marcher car vous devez pouvoir analyser **multiples facteurs** tels que **le temps** que vous avez, ce que **les gens aimeraient jouer**, ce que **vous aimeriez faire** comme jeu aussi. Mais ne vous en faites pas, **avec un peu de méthode on peut s'en sortir** !
 
@@ -67,11 +85,11 @@ Voici un petit tableau du **temps de travail max** sur un jeu que j'estime possi
 
 ## Trouver le gameplay
 
-Il est capital de trouver le gameplay avant le reste, car c'est l'épine dorsale de votre jeu. Si vous perdez du temps sur le reste et que vous ne trouvez pas un gameplay qui convient, c'est dommage. C'est une erreur fréquente. Mais lorsqu'on a un gameplay il est rare de ne pas trouver le reste, c'est même plus facile.
+**Il est capital de trouver le gameplay avant le reste**, car c'est l'épine dorsale de votre jeu. Si vous perdez du temps sur le reste et que vous ne trouvez pas un gameplay qui convient, c'est dommage. C'est une erreur fréquente. Mais lorsqu'on a un gameplay il est rare de ne pas trouver le reste, c'est même plus facile.
 
-D'ailleurs, il est souvent valorisé dans les game jams de **respecter le thème grâce au gameplay** plutôt que seulement grâce au reste.
+D'ailleurs, il est souvent valorisé dans les game jams de **respecter le thème grâce au gameplay**, même si c'est très subtil, plutôt que seulement grâce au reste.
 
-Personnellement, je fait **du "brainstorming"**. Je prends un cahier et j'essaye de **faire partir du thème des idées par rapprochement**.
+Personnellement, je fais du **"brainstorming"**. Je prends un cahier et j'essaye de **faire partir du thème des idées par rapprochement**.
 
 Par exemple ici :
 
@@ -84,6 +102,7 @@ Par exemple ici :
     - Fall = Tomber
       - un jeu où tu peux tomber
       - un jeu où tu perds quelque chose
+      - un jeu basé sur la physique
       - ...
 ```
 
@@ -91,5 +110,9 @@ Très vite, on a une liste d'idées assez exhaustive. Mais ce n'est pas tout !
 
 En général **les gens ne jouent pas longtemps du tout** (2 minutes max) à votre jeu. Il faut donc que votre jeu soit **simple**, **efficace**, **immédiatement compréhensible**, et **sans difficulté**. Pas besoin de rejouabilité, de quêtes à ralonges ni d'addictivité, bien que dans de plus gros projets vous devriez surement les prendre en compte.
 
-Contrairement à certaines croyances, **l'originalité du gameplay ne fait pas tout** et un gameplay original mais moins accessible sera souvent défavorable à la visibilité de votre jeu, ce qui n'est pas négligeable puisque **les notations sont souvent très proches des classements de popularité** des jeux.
+Contrairement à certaines croyances, **l'originalité du gameplay ne fait pas tout** et un gameplay original mais moins accessible sera souvent défavorable à la visibilité de votre jeu, ce qui n'est pas négligeable puisque **les notations sont souvent très proches des classements de popularité** des jeux, même si les jeux populaires ne sont pas toujours les plus recherchés, complets et amusants.
+
+Mais bon le classement c'est bien mais il ne faut pas en faire une obsession, le but c'est de s'améliorer.
+
+## Trouver le style graphique
 

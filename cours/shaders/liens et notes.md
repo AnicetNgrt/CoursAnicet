@@ -55,7 +55,7 @@ Les différences marquantes sont les suivantes :
 - Des types vecteur, textures et matrice sont présents par défaut (et sont parfois natifs comme les int et les float en C)
 	
 	Exemple: vecteur taille 2 (x, y) `vec2`, vecteur taille 3 (x, y, z) `vec3` vecteur taille 4 (x, y, z, a) `vec4`
-- Les couleurs sont représentées par des vecteurs de taille 4 (rouge, vert, bleu, opacité) est écrit (r, g, b, a) ou (x, y , z, a) avec chaque attribut nombre à virgule compris entre 0 (noir) et 1 (couleur au max)
+- Les couleurs sont représentées par des vecteurs de taille 4 (rouge, vert, bleu, opacité), ce qui est écrit (r, g, b, a) ou (x, y , z, a) avec chaque attribut nombre à virgule compris entre 0 (noir) et 1 (couleur au max)
 - Les vecteurs comportent des raccourcis d'accès intuitifs
 	
 	Exemple: faire `monVecteurDeTaille4.yzz` donne un vecteur de taille 3 comprenant en x la valeur en y du premier vecteur et en y et en z la valeur en z du premier vecteur.

@@ -38,7 +38,12 @@ Prenons ici l'exemple du site shadertoy qui utilise l'API graphique OpenGL et do
 
 ## Shadertoy
 [Shadertoy](https://www.shadertoy.com) est un site pour écrire des shaders, les visualiser dans le navigateur et les partager ensuite à la communauté.
-On y trouve beaucoup de shaders très avancés qui reproduisent des mondes réalistes à partir de simple shaders, donc 100% dans le code, sans passer par de logiciels de modélisation 3D. Difficile de s'imaginer comment "coder" un arbre ou un lapin qui sautille, mais les utilisateurs de shadertoy sont très ingénieux. Si les gens vous prennent pour un sorcier lorsqu'ils apprennent que vous programmez, et bien sachez dans ce cas là que les pros des shaders sont les sorciers parmi les sorciers ce qui est loin de manquer de style. Nous on va rester au stade magicien du dimanche avec ses tours de cartes pas dingues, mais comprenez qu'on peut aller très loin.
+
+On y trouve beaucoup de shaders très avancés qui reproduisent des mondes réalistes 100% dans le code, sans passer par de logiciels de modélisation 3D. 
+
+Difficile de s'imaginer comment "coder" un arbre ou un lapin qui sautille, mais les utilisateurs de shadertoy sont très ingénieux. Si les gens vous prennent pour un sorcier lorsqu'ils apprennent que vous programmez, et bien sachez dans ce cas là que les pros des shaders sont les sorciers parmi les sorciers, ce qui est loin de manquer de style. 
+
+Nous on va rester au stade magicien du dimanche avec ses tours de cartes pas dingues, mais comprenez qu'on peut aller très loin.
 
 ## La syntaxe
 La syntaxe de GLSL est similaire à celle du langage C.

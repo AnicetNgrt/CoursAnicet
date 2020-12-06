@@ -55,7 +55,8 @@ Les différences marquantes sont les suivantes :
 	Exemple: vecteur taille 2 (x, y) `vec2`, vecteur taille 3 (x, y, z) `vec3` vecteur taille 4 (x, y, z, a) `vec4`
 - Les couleurs sont représentées par des vecteurs de taille 4 (rouge, vert, bleu, opacité) est écrit (r, g, b, a) ou (x, y , z, a) avec chaque attribut nombre à virgule compris entre 0 (noir) et 1 (couleur au max)
 - Les vecteurs comportent des raccourcis d'accès intuitifs
-	Exemple: faire `monVecteurDeTaille4.yzz` donne un vecteur de taille 3 comprenant en x la valeur en y du premier vecteur et en y et en z la valeur en z du premier vecteur. (V = (x, y, z, a), v.xxzy = V2 = (V.x, V.x, V.z, V.y))
+	Exemple: faire `monVecteurDeTaille4.yzz` donne un vecteur de taille 3 comprenant en x la valeur en y du premier vecteur et en y et en z la valeur en z du premier vecteur.
+	Exemple: V = (x, y, z, a), v.xxzy = V2 = (V.x, V.x, V.z, V.y))
 
 ## Shader minimal
 De la même manière qu'en programmation classique le programme minimal consiste en un `printf("hello world");`, le shader minimal dessine un rectangle coloré en chaque point selon l'UV. L'UV (rien à voir avec l'ultra violet) c'est une valeur d'entrée souvent utilisée dans les shaders. C'est un vecteur de taille 2 avec en x une valeur de 0 à 1 indiquant à quel point on est proche du côté droit de l'image, et en y à quel point on est proche du bord bas de l'image.C'est pratique pour faire comprendre au shader où il se situe dans l'image. 

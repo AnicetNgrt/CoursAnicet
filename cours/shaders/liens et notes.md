@@ -12,14 +12,14 @@ Le problème vient plus de la taille de l'image. Lorsque vous faites 60 images p
 
 La solution est d'utiliser le GPU car il possède des milliers de coeurs pas très intelligents mais capables de faire des opérations spécifiques en parallèle. Finie la queue devant le magasin, tous vos pixels peuvent être calculés presque en simultané! Mais pour coordonner tous ces passages simultanés il faut des programmes très spécifiques tels que les shaders.
 
-Ainsi le shader est un bout de code exécuté sur tous les coeurs du GPU en même temps. Mais comme chaque coeur est pas super intelligent il faut impérativement que tous les coeurs reçoivent le même shader, les mêmes données en entrée, et doivent renvoyer leur résultat de la même façon.
+Ainsi le shader est un bout de code exécuté sur tous les coeurs du GPU en même temps. Mais comme chaque coeur est pas super intelligent il faut impérativement que tous les coeurs reçoivent le même shader, les mêmes données en entrée, et aient à renvoyer leur résultat de la même façon.
 
-Celà implique des techniques assez curieuses pour faire comprendre à chaque coeur où et comment calculer son propre pixel, mais on verra pas ça aujourd'hui car la plupart des outils nous donnent des moyens de le faire sans trop avoir besoin de comprendre. Pour l'instant voyons ce qu'on peut faire de cool avec des shaders.
+Celà implique des techniques assez farfelues pour faire comprendre à chaque coeur où et comment calculer son propre pixel. Mais on ne verra pas ça aujourd'hui car la plupart des outils nous donnent des moyens de le faire sans trop avoir besoin de comprendre. Pour l'instant voyons ce qu'on peut faire de cool avec des shaders.
 
 ## Quelques shaders cools
 Les shaders ne servent pas qu'à calculer la couleur de pixels, ils peuvent servir à toute forme de calculs intensifs et répétés. Par exemple calculer le mouvement de milliers de brins d'herbes en fonction du vent, simuler l'érosion à partir de milliers de goutelletes pour générer des montagnes procéduralement, faire des automates cellulaires...
 
-Pour tous ces calculs existent des types de shaders appropriés comportant des raccourcis et variables d'entrée/sortie adaptées, même si rien ne vous empèche d'utiliser ces variables d'entrée et de sortie pour faire des choses pas vraiment prévues au départ (par exemple encoder dans la couleur de chaque pixel d'une image le taux de joie de milliers de Sims, ou encore encoder un booléen "vrai = vivant", "faux = mort" dans un simulateur de sélection naturelle).
+Pour tous ces calculs existent des types de shaders appropriés comportant des raccourcis et variables d'entrée/sortie adaptées, même si rien ne vous empèche d'utiliser ces variables d'entrée et de sortie pour faire des choses pas vraiment prévues au départ (par exemple encoder dans la couleur de chaque pixel d'une image le taux de joie de milliers de Sims, ou encore encoder un booléen "vrai = vivant", "faux = mort" en fonction de si l'intensité du bleu dans la couleur est plus proche de 0 ou de 1 si vous codez un simulateur de sélection naturelle).
 
 Voici quelques exemple de shaders cools et variés :
 
@@ -27,7 +27,7 @@ Voici quelques exemple de shaders cools et variés :
 - [De l'herbe dynamique à la Breath of the Wild](https://roystan.net/articles/grass-shader.html)
 - [Un tutoriel pour animer des arbres à la manière d'Animal Crossing avec des shaders](https://www.youtube.com/watch?v=V1nkv8g-oi0&list=LL&index=50)
 
-Dans cet atelier on se concentrera sur les shaders "Fragment", qui servent à calculer la couleur de chaque pixel d'une image. Même si vous avez bien compris qu'on peut aussi faire une IA et des simulations galactiques à partir de cette image. Mais bon on va rester simple et visuel pour le moment.
+Dans cet atelier on se concentrera sur les shaders "Fragment", qui servent à calculer la couleur de chaque pixel d'une image. Même vous avez bien compris qu'on peut aussi faire une IA et des simulations galactiques à partir de cette image. Mais bon on va rester simple et visuel pour le moment.
 
 # Comment écrire un shader
 Ce sujet est assez spécifique à l'API graphique visée et au moteur. Les langages peuvent changer, mais aussi la manière dont on charge les shaders, dont on les paramètre et dont on les fait exécuter par le GPU.

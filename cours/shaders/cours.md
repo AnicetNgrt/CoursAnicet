@@ -69,7 +69,7 @@ En fonction du langage de shading on a soit l'UV dès le départ et on peut reca
 
 Ci-dessous le shader minimal tel qu'il est lorsqu'on [crée un nouveau shader sur shadertoy](https://www.shadertoy.com/new) :
 
-```C++
+```c#
 void mainImage( out vec4 fragColor, in vec2 fragCoord )
 {
     // Normalized pixel coordinates (from 0 to 1)

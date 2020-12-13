@@ -44,8 +44,7 @@ public class Player {
     public void ajouterItem(Item item) {
         inventory.add(item);
     }
-}
-// 
+} 
 ```
 
 Ensuite il faut créer la classe `Item` et on lui donnera un attribut `String name` car on part du principe que tous les items seront nommés. Grâce à l'héritage, tous nos types hérités d'`Item` auront cet attribut même si on ne le recopie pas partout :
@@ -74,7 +73,8 @@ public class Pain extends Item {
         durabilite = durabiliteMax;
     } 
 }
-
+```
+```java
 // TasDor.java
 public class TasDor extends Item {
     private int nbPieces;

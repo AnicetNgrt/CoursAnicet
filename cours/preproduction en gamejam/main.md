@@ -112,7 +112,56 @@ En général **les gens ne jouent pas longtemps du tout** (2 minutes max) à vot
 
 Contrairement à certaines croyances, **l'originalité du gameplay ne fait pas tout** et un gameplay original mais moins accessible sera souvent défavorable à la visibilité de votre jeu, ce qui n'est pas négligeable puisque **les notations sont souvent très proches des classements de popularité** des jeux, même si les jeux populaires ne sont pas toujours les plus recherchés, complets et amusants.
 
-Mais bon le classement c'est bien mais il ne faut pas en faire une obsession, le but c'est de s'améliorer.
+Mais bon le classement c'est bien mais il ne faut pas en faire une obsession, **tentez plutôt quelque chose de nouveau pour vous car le but c'est de s'améliorer**.
 
 ## Trouver le style graphique
+
+### 2D ou 3D ou 2.5D ?
+
+Cela dépend beaucoup de ce que vous savez faire. Clairement, si vous n'avez jamais fait de jeux 3D, vous n'allez pas l'apprendre en 2 jours, à moins de faire un jeu qu'avec des parallépipèdes rectangles. Donc tout dépend aussi de la durée de la jam.
+
+La 2.5D à la Doom peut être un bon compromis, moins de flexibilité de la caméra, des images 2D dans le plan 3D, c'est un style graphique très à la mode qui a souvent son petit effet lorsqu'il est couplé avec des effets visuels bien dosés.
+
+Si tout ce que je viens de dire vous semble être de la magie noire, faites un jeu en 2D. Moi aussi je fais des jeux en 2D, presque tout le monde fait des jeux en 2D. Les jeux en 2D c'est bien, ça peut aussi être magnifique, c'est souvent plus lisible et plus abouti dans les jeux de game jam.
+
+### Comprendre ce qui attire l'oeuil
+
+Même si votre objectif n'est pas de faire un jeu putaclick, savoir quels styles graphiques fonctionnent bien, sont jolis, et ne requièrent pas trop d'efforts est capital. Car c'est le seul moyen de produire un jeu graphiquement abouti en une courte période de temps, et personne n'aime faire de jeux à moitié moches et pas finis.
+
+Voici quelques exemples...
+
+#### Pixelart
+
+Le style de choix car il est rapide, efficace et nostalgique. 
+
+Mais attention ! Mal compris et utilisé il devient totallement *immonde*. Voici quelques conseils de pixelartist pour ne pas faire preuve de mauvais goût :
+
+- Limitez vous à une palette de 8 à 32 couleurs (voir palettes sur [Lospec](https://lospec.com))
+- Limitez vous à une basse résolution (480p c'est bien)
+- Ne mettez pas de tailles de pixels différentes à l'écran
+- Désactivez l'antialiasing sur vos images
+- Évitez d'effectuer des rotations sur vos pixels si vous ne savez pas ce que vous faites
+- Évitez les "jaggies"
+
+L'ajout de normal maps et d'effets de lumière peut facilement vous propulser dans le top 10 des graphismes sans trop d'effort.
+
+#### 3D/2.5D unshaded
+
+Ce style très efficace est difficile à expliquer mais en réalité très simple si vous vous y connaissez un peu en 3D. Voici [une vidéo qui résume tout ça mieux que moi](https://www.youtube.com/watch?v=WO4BrPZ1P3A). Mais en 4 mots : Couleurs vives et contraste.
+
+Avec un peu d'effort et d'effets de particules ça peut même être poétique et rendre votre jeu plus prestigieux qu'il ne l'est vraiment.
+
+#### Style "Paper Mario"
+
+Efficace lui aussi, il consiste à bloquer la caméra dans un monde en 3D et de se passer de modèles 3D pour les remplacer par des images 2D vue du bon angle. Les images seront généralement appliquées en tant que textures sur un quadmesh.
+
+Si vous arrivez à un effet proche des jeux *Paper Mario*, votre jeu provoquera une telle nostalgie chez le joueur qui oubliera totalement de juger la qualité et l'originalité graphique réelle de votre jeu.
+
+#### D'autres styles à la mode
+
+- FPS retro et enemis en 2D (Doom)
+- 3D pixelart (Octopath Traveller)
+- Vector Art avec couleurs vives et animations exagérées (Thomas Was Alone)
+- Style aquarelle ou style peinture légère et discrète ([Doc Géraud](https://www.youtube.com/watch?v=TFx66SKTs8w))
+- Style dessins aux pastels (Yoshi Island)
 

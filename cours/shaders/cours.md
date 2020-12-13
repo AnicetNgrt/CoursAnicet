@@ -3,23 +3,23 @@ Aujourd'hui l'on va découvrir les shaders. Ce sont des outils très puissants p
 
 
 # Qu'est-ce qu'un shader ?
-Un shader est un programme informatique bien particulier qui permet de dessiner à l'écran uniquement à partir du code. C'est à partir de ces programmes que sont construits la quasi-totalité des moteurs de jeux modernes. Les shaders peuvent produirent des images très complexes et peuvent être écrits avec des langages variés mais similaire qui dépendent du moteur de jeu utilisé ou de l'[API graphique](https://www.frandroid.com/hardware/345822_vulkan-a-quoi-sert-nouvelle-api-graphique-joueurs) visée.
+Un shader est un programme informatique bien particulier qui permet de dessiner à l'écran uniquement à partir du code. C'est à partir de ces programmes que sont construits la quasi-totalité des moteurs de jeux modernes. Les shaders peuvent produire des images très complexes et peuvent être écrits avec des langages variés mais similaire qui dépendent du moteur de jeu utilisé ou de l'[API graphique](https://www.frandroid.com/hardware/345822_vulkan-a-quoi-sert-nouvelle-api-graphique-joueurs) visée.
 
 ## Comment ça marche ?
-La nature du shader est intimement liée au fonctionnement du GPU (= carte graphique). En effet, pour dessiner des choses à l'écran pas besoin d'un langage en particulier ou même du GPU. Il suffit de choisir une couleur par pixel et de les mettre dans un tableau à deux dimensions. Ensuite il suffit d'écrire ce tableau dans un fichier selon un algorithme qu'on peut trouver sur Internet et de lui donner la bonne extension. Et voilà on a une image.
+La nature du shader est intimement liée au fonctionnement du GPU (= carte graphique). En effet, pour dessiner des choses à l'écran pas besoin d'un langage en particulier ou même du GPU. Il suffit de choisir une couleur par pixel et de les mettre dans un tableau à deux dimensions. Ensuite il suffit d'écrire ce tableau dans un fichier selon un algorithme que l'on peut trouver sur Internet et de lui donner la bonne extension. Voilà, on a une image.
 
-Le problème vient plus de la taille de l'image. Lorsque vous faites 60 images par seconde (ips) au sein d'un moteur de jeu, il faut calculer plein de choses pour chaque pixel. Et si vous faisiez ça sur le CPU (= processeur) qui ne peut faire qu'une seule chose à la fois (en réalité ça dépend du nombre de coeurs), et bien vous devriez faire passer les pixels à la queue leu leu est ça serait beaucoup trop long pour atteindre les 60 ips.
+Le problème vient plus de la taille de l'image. Lorsque vous faites 60 images par seconde (ips) au sein d'un moteur de jeu, il faut faire plusieurs calculs pour chaque pixel. Une image de 1920 par 1080 pixels en contient plus de deux millions. Autant dire que si vous faisiez ça sur le CPU (= processeur) qui ne peut faire qu'une seule chose à la fois (en réalité cela dépend du nombre de cœurs), et bien vous devriez faire passer les pixels à la queue leu leu est ça serait beaucoup trop long pour atteindre les 60 ips.
 
-La solution est d'utiliser le GPU car il possède des milliers de coeurs pas très intelligents mais capables de faire des opérations spécifiques en parallèle. Finie la queue devant le magasin, tous vos pixels peuvent être calculés presque en simultané! Mais pour coordonner tous ces passages simultanés il faut des programmes très spécifiques tels que les shaders.
+La solution est d'utiliser le GPU car il possède des milliers de cœurs pas très intelligents mais capables de faire des opérations spécifiques en parallèle. Finie la queue devant le magasin, tous vos pixels peuvent être calculés presque en simultané! Mais pour coordonner tous ces passages simultanés il faut des programmes très spécifiques tels que les shaders.
 
-Ainsi le shader est un bout de code exécuté sur tous les coeurs du GPU en même temps. Mais comme chaque coeur est pas super intelligent il faut impérativement que tous les coeurs reçoivent le même shader, les mêmes données en entrée, et aient à renvoyer leur résultat de la même façon.
+Ainsi le shader est un bout de code exécuté sur tous les cœurs du GPU en même temps. Mais comme chaque cœur est pas super intelligent il faut impérativement que tous les cœurs reçoivent le même shader, les mêmes données en entrée, et aient à renvoyer leur résultat de la même façon.
 
-Celà implique des techniques assez farfelues pour faire comprendre à chaque coeur où et comment calculer son propre pixel. Mais on ne verra pas ça aujourd'hui car la plupart des outils nous donnent des moyens de le faire sans trop avoir besoin de comprendre. Pour l'instant voyons ce qu'on peut faire de cool avec des shaders.
+Cela implique des techniques assez farfelues pour faire comprendre à chaque cœur où et comment calculer son propre pixel. Mais on ne verra pas ça aujourd'hui car la plupart des outils nous donnent des moyens de le faire sans trop avoir besoin de comprendre. Pour l'instant voyons ce qu'on peut faire de cool avec des shaders.
 
 ## Quelques shaders cools
-Les shaders ne servent pas qu'à calculer la couleur de pixels, ils peuvent servir à toute forme de calculs intensifs et répétés. Par exemple calculer le mouvement de milliers de brins d'herbes en fonction du vent, simuler l'érosion à partir de milliers de goutelletes pour générer des montagnes procéduralement, faire des automates cellulaires...
+Les shaders ne servent pas qu'à calculer la couleur de pixels, ils peuvent servir à toute forme de calculs intensifs et répétés. Par exemple calculer le mouvement de milliers de brins d'herbes en fonction du vent, simuler l'érosion à partir de milliers de gouttelettes pour générer des montagnes procéduralement, faire des automates cellulaires...
 
-Pour tous ces calculs existent des types de shaders appropriés comportant des raccourcis et variables d'entrée/sortie adaptées, même si rien ne vous empèche d'utiliser ces variables d'entrée et de sortie pour faire des choses pas vraiment prévues au départ (par exemple encoder dans la couleur de chaque pixel d'une image le taux de joie de milliers de Sims, ou encore encoder un booléen "vrai = vivant", "faux = mort" en fonction de si l'intensité du bleu dans la couleur est plus proche de 0 ou de 1 si vous codez un simulateur de sélection naturelle).
+Pour tous ces calculs existent des types de shaders appropriés comportant des raccourcis et variables d'entrée/sortie adaptées, même si rien ne vous empêche d'utiliser ces variables d'entrée et de sortie pour faire des choses pas vraiment prévues au départ (par exemple encoder dans la couleur de chaque pixel d'une image le taux de joie de milliers de Sims, ou encore encoder un booléen "vrai = vivant", "faux = mort" en fonction de si l'intensité du bleu dans la couleur est plus proche de 0 ou de 1 si vous codez un simulateur de sélection naturelle).
 
 Voici quelques exemple de shaders cools et variés :
 
@@ -50,16 +50,16 @@ La syntaxe de GLSL est similaire à celle du langage C.
 
 Les différences marquantes sont les suivantes :
 - Il faut indiquer `out` ou `in` devant les paramètres dans le prototype des fonctions
-	
+
 	Exemple: `void mainImage( out vec4 fragColor, in vec2 fragCoord ){}`
 - Des types vecteur, textures et matrice sont présents par défaut (et sont parfois natifs comme les int et les float en C)
-	
+
 	Exemple: vecteur taille 2 (x, y) `vec2`, vecteur taille 3 (x, y, z) `vec3` vecteur taille 4 (x, y, z, a) `vec4`
 - Les couleurs sont représentées par des vecteurs de taille 4 (rouge, vert, bleu, opacité), ce qui est écrit (r, g, b, a) ou (x, y , z, a) avec chaque attribut nombre à virgule compris entre 0 (noir) et 1 (couleur au max)
 - Les vecteurs comportent des raccourcis d'accès intuitifs
-	
+
 	Exemple: faire `monVecteurDeTaille4.yzz` donne un vecteur de taille 3 comprenant en x la valeur en y du premier vecteur et en y et en z la valeur en z du premier vecteur.
-	
+
 	Exemple: V = (x, y, z, a), v.xxzy = V2 = (V.x, V.x, V.z, V.y))
 
 ## Shader minimal
@@ -93,23 +93,33 @@ Ensuite, on a accès à plusieurs constantes qui seront les mêmes à chaque app
 
 Maintenant expliquons ligne par ligne :
 
-`vec2 uv = fragCoord/iResolution.xy;` ici on crée le vecteur UV de taille 2 `vec2` en divisant deux autres vecteurs de taille 2 `fragCoord` et le raccourcis `iResolution.xy` que j'ai expliqué précédemment. La division entre deux vecteurs se fait paramètre par paramètre. Par exemple prenons V1=(x, y) et V2=(a, b) et bien V1/V2 donne V3=(x/a, y/b). Dès lors ici on fait UV=(coordonnée_en_x/largeur, coordonnées_en_y/hauteur) ce qui nous donne bien un x et un y compris entre 0 et 1 et indiquant à quel point on est à droite, respectivement en bas, de l'image.
+`vec2 uv = fragCoord/iResolution.xy;` ici on crée le vecteur UV de taille 2 `vec2` en divisant deux autres vecteurs de taille 2 `fragCoord` et le raccourcis `iResolution.xy` que j'ai expliqué précédemment. La division entre deux vecteurs se fait paramètre par paramètre. Par exemple prenons `V1=(x, y)` et `V2=(a, b)` et bien `V1/V2` donne `V3=(x/a, y/b)`. Dès lors ici on fait `UV=(coordonnée_en_x/largeur, coordonnées_en_y/hauteur)` ce qui nous donne bien un x et un y compris entre 0 et 1 et indiquant à quel point on est à droite, respectivement en bas, de l'image.
 
 `vec3 col = 0.5 + 0.5*cos(iTime+uv.xyx+vec3(0,2,4));` ici on calcule directement la couleur du pixel. 
 D'abord on fait `col = 0.5` ce qui peut paraître étrange puisque `col` est un `vec3` et `0.5` un `float`. Mais en réalité cette opération est permise et donne un vecteur de taille 3 rempli avec des 0.5.
-Ensuite `0.5*cos(iTime+uv.xyx+vec3(0,2,4))` qu'on va décortique en 2 étapes:
-- `iTime+uv.xyx+vec3(0,2,4)`: ici on a un calcul qui donne un vecteur 3. En effet, additionner uv.xyx qui est un vecteur 3, vec3(0,2,4) qui est aussi un vecteur 3, et iTime qui est un float consiste à faire l'opération `Vecteur3(x=iTime, y=iTime, z=iTime) + Vecteur3(x=UV.x, y=UV.y, z=UV.x) + Vecteur3(x=0, y=2, z=4)`. En fait l'on veut faire une couleur donc, dans le résultat de ce calcul, le x indique la quantité de rouge, y la quantité de vert et z la quantité de bleu. Ainsi on a :
-  - Rouge = temps + a_quel_point_on_est_a_droite + 0
-  - Vert = temps + a_quel_point_on_est_en_bas + 2
-  - Bleu = temps + a_quel_point_on_est_a_droite + 4
-  Or ces valeurs ne sont pas comprises entre 0 et 1, et c'est ce que la suite du calcul va faire.
-- `0.5*cos(étape 1)` En effet, faire le cosinus d'un vecteur de taille 3 V1=(x, y, z) donne un vecteur de taille 3 V2=(cos(V1.x), cos(V1.y), cos(V1.z)). Or, [la fonction cos varie périodiquement entre -1 et 1](https://previews.123rf.com/images/julvil/julvil1405/julvil140500063/28459289-vector-illustration-de-la-fonction-math%C3%A9matique-y-=-cos-x.jpg) donc la couleur n'est pas encore entre 0 et 1. Mais comme on la multiplie par 0.5 on a finalement une couleur comprise entre -0.5 et 0.5, et comme on a ajouté 0.5 au tout début du calcul on est bon, on a des valeurs pour l'intensité du bleu, du vert et du rouge qui sont valides.
-Donc pour récapituler on a:
-- Rouge = 0.5 + 0.5 * cosinus(temps + a_quel_point_on_est_a_droite + 0)
-- Vert = 0.5 + 0.5 * cosinus(temps + a_quel_point_on_est_en_bas + 2)
-- Bleu = 0.5 + 0.5 * cosinus(temps + a_quel_point_on_est_a_droite + 4)
 
-`fragColor = vec4(col,1.0);` Ensuite on dit au programme qu'on veut appliquer cette couleur en l'assignant à la variable `out fragColor`, mais sans oublier qu'une couleur valide est un vecteur 4, et que `col` est un vecteur 3. On a donc besoin d'un paramètre supplémentaire : l'opacité, qu'on met à 1.0 ici pour dire qu'elle est maximale (sinon ça serait transparant). 
+Ensuite `0.5*cos(iTime+uv.xyx+vec3(0,2,4))` qu'on va décortique en 2 étapes:
+
+- `iTime+uv.xyx+vec3(0,2,4)`: ici on a un calcul qui donne un vecteur 3. En effet, additionner `uv.xyx` qui est un vecteur 3, `vec3(0,2,4)` qui est aussi un vecteur 3, et `iTime` qui est un `float`, consiste à faire l'opération `Vecteur3(x=iTime, y=iTime, z=iTime) + Vecteur3(x=UV.x, y=UV.y, z=UV.x) + Vecteur3(x=0, y=2, z=4)`. En fait l'on veut faire une couleur donc, dans le résultat de ce calcul, le x indique la quantité de rouge, y la quantité de vert et z la quantité de bleu. Ainsi on a :
+  
+  - `Rouge = temps + a_quel_point_on_est_a_droite + 0`
+  
+  - `Vert = temps + a_quel_point_on_est_en_bas + 2`
+  
+  - `Bleu = temps + a_quel_point_on_est_a_droite + 4`
+
+Or ces valeurs ne sont pas comprises entre 0 et 1, et c'est ce que la suite du calcul va faire :
+
+- `0.5*cos(étape 1)` En effet, faire le cosinus d'un vecteur de taille 3 `V1=(x, y, z)` donne un vecteur de taille 3 `V2=(cos(V1.x), cos(V1.y), cos(V1.z))`. Or, [la fonction cos varie périodiquement entre -1 et 1](https://previews.123rf.com/images/julvil/julvil1405/julvil140500063/28459289-vector-illustration-de-la-fonction-math%C3%A9matique-y-=-cos-x.jpg) donc la couleur n'est pas encore entre 0 et 1. Mais comme on la multiplie par 0.5 on a finalement une couleur comprise entre -0.5 et 0.5, et comme on a ajouté 0.5 au tout début du calcul on est bon, on a des valeurs pour l'intensité du bleu, du vert et du rouge qui sont valides.
+Donc pour récapituler on a:
+
+- `Rouge = 0.5 + 0.5 * cosinus(temps + a_quel_point_on_est_a_droite + 0)`
+
+- `Vert = 0.5 + 0.5 * cosinus(temps + a_quel_point_on_est_en_bas + 2)`
+
+- `Bleu = 0.5 + 0.5 * cosinus(temps + a_quel_point_on_est_a_droite + 4)`
+
+`fragColor = vec4(col,1.0);` Ensuite on dit au programme qu'on veut appliquer cette couleur en l'assignant à la variable `out fragColor`, mais sans oublier qu'une couleur valide est un vecteur 4, et que `col` est un vecteur 3. On a donc besoin d'un paramètre supplémentaire : l'opacité, qu'on met à 1.0 ici pour dire qu'elle est maximale (sinon ça serait transparent). 
 
 Ce qui nous donne cette variation périodique de couleurs en fonction d'où on se situe sur l'image. 
 

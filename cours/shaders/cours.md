@@ -1,25 +1,25 @@
 # Atelier découverte des Shaders
-Aujourd'hui l'on va découvrir les shaders. Ce sont des outils très puissants pour créer des effets visuels dans le jeux et dans le cinéma qui sont aussi fascinants que complexes.
+Aujourd'hui l'on va découvrir les shaders. Ce sont des outils aussi fascinants que complexes qui permettent de créer des effets visuels dans les jeux et aussi au cinéma dans les CGIs.
 
 
 # Qu'est-ce qu'un shader ?
-Un shader est un programme informatique bien particulier qui permet de dessiner à l'écran uniquement à partir du code. C'est à partir de ces programmes que sont construits la quasi-totalité des moteurs de jeux modernes. Les shaders peuvent produire des images très complexes et peuvent être écrits avec des langages variés mais similaire qui dépendent du moteur de jeu utilisé ou de l'[API graphique](https://www.frandroid.com/hardware/345822_vulkan-a-quoi-sert-nouvelle-api-graphique-joueurs) visée.
+Un shader est un programme informatique bien particulier qui permet de dessiner à l'écran uniquement à partir du code. C'est à partir de ces programmes que sont construits la quasi-totalité des moteurs de jeux modernes. Les shaders peuvent produire des images très complexes et peuvent être écrits avec des langages variés (mais tous similaires) qui dépendent du moteur de jeu utilisé ou de l'[API graphique](https://www.frandroid.com/hardware/345822_vulkan-a-quoi-sert-nouvelle-api-graphique-joueurs) visée.
 
 ## Comment ça marche ?
-La nature du shader est intimement liée au fonctionnement du GPU (= carte graphique). En effet, pour dessiner des choses à l'écran pas besoin d'un langage en particulier ou même du GPU. Il suffit de choisir une couleur par pixel et de les mettre dans un tableau à deux dimensions. Ensuite il suffit d'écrire ce tableau dans un fichier selon un algorithme que l'on peut trouver sur Internet et de lui donner la bonne extension. Voilà, on a une image.
+La nature du shader est intimement liée au fonctionnement du GPU (= carte graphique). En effet, pour dessiner des choses à l'écran pas besoin d'un langage en particulier ou même du GPU. Il suffit de choisir une couleur par pixel et de les mettre dans un tableau à deux dimensions. Ensuite il suffit d'écrire ce tableau dans un fichier selon un algorithme que l'on peut trouver sur Internet et de lui donner la bonne extension. Eh voilà, on a une image.
 
 Le problème vient plus de la taille de l'image. Lorsque vous faites 60 images par seconde (ips) au sein d'un moteur de jeu, il faut faire plusieurs calculs pour chaque pixel. Une image de 1920 par 1080 pixels en contient plus de deux millions. Autant dire que si vous faisiez ça sur le CPU (= processeur) qui ne peut faire qu'une seule chose à la fois (en réalité cela dépend du nombre de cœurs), et bien vous devriez faire passer les pixels à la queue leu leu est ça serait beaucoup trop long pour atteindre les 60 ips.
 
-La solution est d'utiliser le GPU car il possède des milliers de cœurs pas très intelligents mais capables de faire des opérations spécifiques en parallèle. Finie la queue devant le magasin, tous vos pixels peuvent être calculés presque en simultané! Mais pour coordonner tous ces passages simultanés il faut des programmes très spécifiques tels que les shaders.
+La solution est d'utiliser le GPU car il possède des milliers de cœurs pas très intelligents mais capables de faire des opérations spécifiques en parallèle. Finie la queue devant le magasin, tous vos pixels peuvent être calculés presque en simultané ! Mais pour coordonner tous ces passages simultanés il faut des programmes très spécifiques tels que les shaders.
 
-Ainsi le shader est un bout de code exécuté sur tous les cœurs du GPU en même temps. Mais comme chaque cœur est pas super intelligent il faut impérativement que tous les cœurs reçoivent le même shader, les mêmes données en entrée, et aient à renvoyer leur résultat de la même façon.
+Ainsi, les shaders sont des bouts de code exécutés sur tous les cœurs du GPU en même temps. Mais comme chaque cœur est pas super intelligent il faut impérativement que tous les cœurs reçoivent le même shader à un instant T, les mêmes données en entrée, et aient à renvoyer leur résultat de la même façon.
 
 Cela implique des techniques assez farfelues pour faire comprendre à chaque cœur où et comment calculer son propre pixel. Mais on ne verra pas ça aujourd'hui car la plupart des outils nous donnent des moyens de le faire sans trop avoir besoin de comprendre. Pour l'instant voyons ce qu'on peut faire de cool avec des shaders.
 
 ## Quelques shaders cools
 Les shaders ne servent pas qu'à calculer la couleur de pixels, ils peuvent servir à toute forme de calculs intensifs et répétés. Par exemple calculer le mouvement de milliers de brins d'herbes en fonction du vent, simuler l'érosion à partir de milliers de gouttelettes pour générer des montagnes procéduralement, faire des automates cellulaires...
 
-Pour tous ces calculs existent des types de shaders appropriés comportant des raccourcis et variables d'entrée/sortie adaptées, même si rien ne vous empêche d'utiliser ces variables d'entrée et de sortie pour faire des choses pas vraiment prévues au départ (par exemple encoder dans la couleur de chaque pixel d'une image le taux de joie de milliers de Sims, ou encore encoder un booléen "vrai = vivant", "faux = mort" en fonction de si l'intensité du bleu dans la couleur est plus proche de 0 ou de 1 si vous codez un simulateur de sélection naturelle).
+Pour tous ces calculs existent des types de shaders appropriés comportant des raccourcis et variables d'entrée/sortie adaptées, même si rien ne vous empêche d'utiliser ces variables d'entrée et de sortie pour faire des choses pas vraiment prévues au départ (par exemple encoder dans la couleur de chaque pixel d'une image le taux de joie de milliers de Sims, ou si vous codiez un simulateur de sélection naturelle vous pourriez encoder un booléen "vrai = vivant", "faux = mort" en fonction de si l'intensité du bleu dans la couleur est plus proche de 0 ou de 1).
 
 Voici quelques exemple de shaders cools et variés :
 
@@ -27,10 +27,10 @@ Voici quelques exemple de shaders cools et variés :
 - [De l'herbe dynamique à la Breath of the Wild](https://roystan.net/articles/grass-shader.html)
 - [Un tutoriel pour animer des arbres à la manière d'Animal Crossing avec des shaders](https://www.youtube.com/watch?v=V1nkv8g-oi0&list=LL&index=50)
 
-Dans cet atelier on se concentrera sur les shaders "Fragment", qui servent à calculer la couleur de chaque pixel d'une image. Même vous avez bien compris qu'on peut aussi faire une IA et des simulations galactiques à partir de cette image. Mais bon on va rester simple et visuel pour le moment.
+Dans cet atelier on se concentrera sur les shaders "Fragment", qui servent à calculer la couleur de chaque pixel d'une image. Même si vous avez bien compris qu'on peut aussi faire une IA et des simulations galactiques à partir de cette image. Mais bon on va rester simple et visuel pour le moment.
 
 # Comment écrire un shader
-Ce sujet est assez spécifique à l'API graphique visée et au moteur. Les langages peuvent changer, mais aussi la manière dont on charge les shaders, dont on les paramètre et dont on les fait exécuter par le GPU.
+Ce sujet est assez spécifique à l'API graphique visée et au moteur. Les langages peuvent changer, mais aussi la manière dont on charge les shaders, dont on les paramètre et dont on les fait exécuter par le GPU (le CPU s'en charge, traditionnellement par le biais d'un programme en C++, même si les moteurs de jeux automatisent cette étape).
 
 Mais ne vous inquiétez pas, la documentations des différents outils l'explique amplement et le vocabulaire entre différents langages de shader est très très similaire donc on est jamais perdu.
 

@@ -6,8 +6,8 @@ Dans ce repository tu as accès à tous mes cours au format écrit, que j'ai eu 
 
 # Programmation
 
-1. [ ] `12/12/2020 21:30` [Les Shaders](./cours/shaders/cours.md)
+1. `12/12/2020 21:30` [Les Shaders](./cours/shaders/cours.md)
 
 # Hors-série
 
-1. `Work in progress` [Préproduction en Gamejam](./cours/preproduction en gamejam/main.md)
+1. `Work in progress` [Préproduction en Gamejam](./cours/preprodGamejam/main.md)

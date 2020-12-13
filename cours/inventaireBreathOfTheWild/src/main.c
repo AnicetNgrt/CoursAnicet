@@ -1,18 +1,30 @@
 // ---------------------------------------
 // Pattern observer/observable
+typedef int Event;
+typedef enum {TRUE = 1, FALSE = 0} Bool;
+typedef enum {EVENT_NONE = 0} BaseEvents;
+
 typedef struct {
-    int a;
+    Event event = EVENT_NONE;
+    EventChain* next = NULL;
+    Bool isLast = TRUE;
+} EventChain;
+
+typedef struct {
+    EventChain* pendingEvents = NULL;
+    Bool hasPendingEvents = FALSE;
 } Observer;
 
 typedef struct {
-    ObserverLink* subscribers;
+    ObserverChain* subscribers = NULL;
+    Bool hasSubscribers = FALSE;
 } Observable;
 
 typedef struct {
     Observer* pointer;
-    ObserverLink* next;
-    unsigned int isLast;
-} ObserverLink;
+    ObserverChain* next = NULL;
+    Bool isLast = TRUE;
+} ObserverChain;
 // ---------------------------------------
 
 // ---------------------------------------
@@ -57,23 +69,27 @@ typedef struct {
         MAX_NPC = 50;
     }
     ItemSchema[] gameItems;
-    Character* player;
     Character[] npcs = Character[MAX_NPC];
+    Character* player;
     unsigned int turn = 0;
 } Game;
 // ---------------------------------------
 
-
-void update() {
-
-}
-
-void gameLoop() {
+void game_loop(Game* game) {
     while (true) {
 
     }
 }
 
+Game* create_game() {
+    Game game;
+    game.gameItems = ItemSchema[] {
+        
+    };
+    return &game;
+}
+
 void main() {
-    
+    Game* game = create_game();
+    game_loop(game);
 }

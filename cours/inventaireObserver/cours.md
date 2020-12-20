@@ -267,8 +267,8 @@ public class Main {
         joueur.ajouterItem(tasDor1);
         joueur.ajouterItem(tasDor2);
         
-        // On joue les tours de jeux jusqu'à ce qu'il n'aie
-        // plus aucun item
+        // On joue les tours de jeu jusqu'à ce que le joueur
+        // n'aie plus aucun item
         // Dans notre jeu le pain perd 0.1 de durabilité par tour
         // et le tas d'or une pièce par tour
         // Dans combien de tour est-ce que l'inventaire sera vide ?

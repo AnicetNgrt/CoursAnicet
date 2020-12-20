@@ -7,7 +7,7 @@ Dans ce repository tu as accès à tous mes cours au format écrit, que j'ai eu 
 # Programmation
 
 1. `12/12/2020 21:30` [Les Shaders](./cours/shaders/cours.md)
-2. `Work in progress` [L'inventaire de RPG dynamique avec l'Observer pattern](./cours/inventaireObserver/cours.md)
+2. `17/12/2020 21:00` [Un système d'inventaire avec l'Observer pattern](./cours/inventaireObserver/cours.md)
 
 # Hors-série
 

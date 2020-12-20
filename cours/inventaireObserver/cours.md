@@ -48,6 +48,10 @@ public class Player {
     public void retirerItem(Item item) {
         inventory.remove(item);
     }
+    
+    public int getNbItems() {
+        return inventory.size();
+    }
 } 
 ```
 
@@ -77,7 +81,11 @@ public class Pain extends Item {
     public Pain(String name, float durabiliteMax) {
         super(name);
         durabilite = durabiliteMax;
-    } 
+    }
+    
+    public float getDurabilite() {
+        return durabilite;
+    }
 }
 ```
 ```java
@@ -88,6 +96,10 @@ public class TasDor extends Item {
     public TasDor(String name, int nbPieces) {
         super(name);
         this.nbPieces = nbPieces;
+    }
+    
+    public int getNbPieces() {
+        return nbPieces;
     }
 }
 ```
@@ -169,7 +181,7 @@ public class Player implements Observer {
     }
     
     public void notifier(Observable origine, String raison) {
-        if(origine instanceof Item && raison == "Item inutilisable") {
+        if(origine instanceof Item && raison == "Devenu inutilisable") {
             retirerItem((Item) origine);
             // On doit "caster" origine de type Observable vers Item
         }
@@ -180,3 +192,105 @@ public class Player implements Observer {
 # Plusieurs manières de disparaître
 Maintenant que nos items peuvent prévenir notre player quand ils disparaissent, il faut coder les différents moyen de disparaître pour chacun de ces types d'items.
 
+D'abord, faisons hériter toutes nos classes d'items d'`Observable` en faisant hériter la classe mère `Item` :
+
+```java
+//Item.java
+//...
+public abstract class Item extends Observable {}
+//...
+```
+
+Rien qu'en faisant ça, les instances de `Player` peuvent déjà s'abonner, se désabonner et recevoir des messages de la part des instances d'`Item`.
+
+Il suffit donc d'envoyer les messages au moment adéquat :
+
+```java
+//TasDor.java
+//...
+public void setNbPieces(int nbPieces) {
+    this.nbPieces = nbPieces;
+    // Si on a plus d'or on préviens qu'on devient inutilisable
+    if(this.nbPieces <= 0) {
+        // On appelle notifierAbonnes à laquelle on a accès
+        // car on hérite d'Item qui hérite d'Observable
+        notifierAbonnes("Devenu inutilisable");
+    }
+}
+//...
+```
+
+```java
+//Pain.java
+//...
+public void setDurabilite(int durabilite) {
+    this.durabilite = durabilite;
+    if(this.durabilite <= 0) {
+        notifierAbonnes("Devenu inutilisable");
+    } 
+}
+//...
+```
+
+Mais attention, on risque d'avoir un énorme bug ! En effet, dans Observable, on fait le tour de tous nos abonnés dans une boucle for lorsqu'on les notifie. Or le fait de notifier Player qu'un item est inutilisable fait qu'il s'en désabonne, ce qui revient à voler un abonné sous le nez de l'Item alors qu'il est en train de tous les notifier un par un. On appelle ça un accès concurrent et c'est un bug. On va donc faire une copie de la liste d'abonnés avant de les notifier pour éviter que la boucle ne s'impacte elle-même.
+
+```java
+//Observable.java
+//...
+private void notifierAbonnes(String raison) {
+    // La class HashSet<> peut être copiée comme ça
+    // Attention, ce n'est pas le cas de la plupart des classes
+    // (voir google: "copy constructor java")
+    HashSet<Observer> abonnesCopie = new HashSet<Observer>(abonnes);
+    for(Observer o:abonnesCopie)
+        o.notifier(this, raison);
+}
+//...
+```
+
+Maintenant, testons un petit peu ce code dans le `main`
+
+```java
+//Main.java
+public class Main {
+    public static void main(String[] args) {
+        // On initialise tous nos éléments de jeu
+        Player joueur = new Player();
+        Pain pain1 = new Pain("Le Pain de Jean", 1);
+        Pain pain2 = new Pain("Le Pain de Jeanne", 3.24);
+        TasDor tasDor1 = new TasDor("L'or de Pierre", 100);
+        TasDor tasDor2 = new TasDor("L'or de Mark", 1000);
+        
+        // On donne les items au joueur
+        joueur.ajouterItem(pain1);
+        joueur.ajouterItem(pain2);
+        joueur.ajouterItem(tasDor1);
+        joueur.ajouterItem(tasDor2);
+        
+        // On joue les tours de jeux jusqu'à ce qu'il n'aie
+        // plus aucun item
+        // Dans notre jeu le pain perd 0.1 de durabilité par tour
+        // et le tas d'or une pièce par tour
+        // Dans combien de tour est-ce que l'inventaire sera vide ?
+        int nbTours = 0;
+        while(joueur.getNbItems() > 0) {
+            pain1.setDurabilite(pain1.getDurabilite() - 0.1);
+            pain2.setDurabilite(pain2.getDurabilite() - 0.1);
+            tasDor1.setNbPieces(tasDor1.getNbPieces() - 1);
+            tasDor2.setNbPieces(tasDor2.getNbPieces() - 1);
+            nbTours++;
+        }
+        System.out.println(nbTours);
+    }
+}
+```
+
+# Pistes d'améliorations
+Le code que je vous propose ici n'est pas parfait, et il est encore loin des standards de qualité dans la plupart des studios … Voyons donc ce que vous pouvez essayer de faire pour l'améliorer :
+
+- Mettre tous les items du jeu dans une liste pour pouvoir y accéder plus proprement
+- Créer une méthode abstraite `update` dans la classe `Item` pour y coder le comportement à chaque tour de chaque type d'item (plutôt que de le copier plusieurs fois dans le code comme ci-dessus).
+- Créer une classe `Game` contenant la liste de tous les items et contenant une méthode servant de boucle de jeu centrale capable de mettre à jour tous les items du jeu en appelant leur méthode `update`
+- Changer les messages de type `String` pour un `Enum` contenant tous les messages possibles et en les documentant correctement.
+
+Maintenant c'est à vous de jouer !

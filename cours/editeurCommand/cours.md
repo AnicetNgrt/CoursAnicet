@@ -4,13 +4,13 @@ Cette fois-ci, c'est au tour d'un autre Design Pattern, nommé le "Command Patte
 # Un éditeur de map
 L'implémentation de ce pattern peut être faite de plusieurs manières, plus ou moins strictes et élaborées, donc fixons nous les idées grâce à un exemple.
 
-Imaginez que vous veniez d'être embauché par NADEO afin de travailler sur le prochain TrackMania. Comme tout TrackMania qui se respecte, votre jeu de courses de voiture sera doté d'un éditeur de map.
+Imaginez que vous veniez d'être embauché par NADEO afin de travailler sur le prochain TrackMania. Comme tout TrackMania qui se respecte, votre jeu de courses de voitures sera doté d'un éditeur de map.
 
 Vous décidez qu'une map soit composée de blocs (des morceaux de route ou de décor) dans une grille en trois dimensions. Chaque placement et modification de bloc devra pouvoir être annulé par un ctrl+z ou refait après annulation par un ctrl+y.
 
 Afin de permettre le ctrl+z et le ctrl+y à l'infini, il va falloir encoder et stocker les actions du joueur dans des piles successives afin d'obtenir un mécanisme FIFO (first in, first out).
 
-L'idée c'est que dès qu'une action est faite elle est encodée puis mise en tout en haut d'une pile. Puis lorsque le ctrl+z sera appuyé, l'action en haut de la pile sera annulée, une fonction inversant l'effet de l'action sera appelée puis l'action encodée sera déplacée en haut d'une deuxième pile. Et lorsque le ctrl+y sera appuyé, l'action en haut de la deuxième pile sera exécutée à nouveau puis redéplacée vers la première pile. Et ainsi de suite.
+L'idée est que dès qu'une action est faite elle est encodée puis mise tout en haut d'une pile. Puis lorsque le ctrl+z sera appuyé, une méthode inversant l'effet de l'action tout en haut de la pile sera appelée puis l'action en question sera déplacée en haut d'une deuxième pile. Et lorsque le ctrl+y sera appuyé, l'action en haut de la deuxième pile sera exécutée à nouveau puis redéplacée vers la première pile. Et ainsi de suite.
 
 `action exécutée -> action mise en haut de la pile du ctrl+z -> ctrl+z -> action inversée -> action mise en haut de la pile du ctrl+y -> ctrl+y -> action (re)exécutée -> ...`
 
@@ -18,11 +18,11 @@ L'idée c'est que dès qu'une action est faite elle est encodée puis mise en to
 On a donc plusieurs actions qu'il va faloir bien définir afin de pouvoir les encoder, les exécuter, et aussi les inverser.
 
 ## Placer un bloc
-Placer un bloc consiste à prendre un bloc (on ne va pas rentrer dans les détails, mais libre à vous de créer une classe Bloc avec tous les attributs qui vous plaisent), une coordonnée en 3D et une grille en 3D puis de remplacer le bloc qui s'y trouvait par notre bloc.
+Placer un bloc consiste à prendre un bloc (on ne va pas rentrer dans les détails, mais libre à vous de créer une classe Bloc avec tous les attributs qui vous plaisent), une coordonnée en 3D et une grille en 3D puis à remplacer le bloc qui se trouve aux dites coordonnées par notre bloc.
 
-Inverser le placement d'un bloc consiste à placer à sa position de bloc qui s'y trouvait avant lui. S'il n'y avait pas de bloc avant lui, l'on placera du vide à nouveau (le bloc "vide" peut être un type de bloc à part entière, ou juste une référence vide telle que la valeur null en java).
+Inverser le placement d'un bloc consiste à placer le bloc qui se trouvait aux dites coordonnées avant lui. S'il n'y avait pas de bloc avant lui, l'on placera du vide à nouveau (le bloc "vide" peut être un type de bloc à part entière, ou juste une référence vide telle que la valeur null en java).
 
-Créons donc la classe PlacementBloc qui va permettre d'encoder, d'exécuter et d'inverser l'action de placement d'un bloc :
+Créons donc la classe CommandPlacementBloc qui va permettre d'encoder, d'exécuter et d'inverser l'action de placement d'un bloc :
 
 ```java
 //CommandPlacementBloc.java
@@ -49,7 +49,7 @@ public class CommandPlacementBloc {
 }
 ```
 
-Et voilà, c'est si simple que ça. Une version alternative consiste à ne pas ratacher immédiatement la grille à la commande comme ça l'on pourra exécuter cette action sur n'importe quelle grille. Ce qui peut servir si l'on décide de l'envoyer à un autre joueur par le réseau pour par exemple coder une version collaborative de notre éditeur de map.
+Et voilà, c'est si simple que ça. Une version alternative consiste à ne pas assigner immédiatement la grille à la commande. Comme ça l'on pourra exécuter cette action sur n'importe quelle grille. Ce qui peut servir si l'on décide de l'envoyer à un autre joueur par le réseau afin, par exemple, de coder une version collaborative de notre éditeur de map.
 
 Pour cela, il suffit de modifier le constructeur et les méthodes exécuter et inverser :
 
@@ -107,7 +107,7 @@ public class App {
         Bloc[][][] grille = new Bloc[TAILLE][TAILLE][TAILLE];
         remplirGrille(grille, "VIDE");
         
-        Coord3D crd = new Coord3D(TAILLE-1); 
+        Coord3D crd = new Coord3D(TAILLE-1); // Constructeur à coder 
         // {x: 9, y: 9, z: 9}
         grille[crd.x()][crd.y()][crd.z()].getType();
         // "VIDE"
@@ -150,6 +150,10 @@ public class CommandModifierBloc {
     public void exécuter(Bloc b) {
         ancienType = b.getType();
         b.setType(nouvType);
+    }
+    
+    public void inverser(Bloc b) {
+        b.setType
     }
 }
 ```

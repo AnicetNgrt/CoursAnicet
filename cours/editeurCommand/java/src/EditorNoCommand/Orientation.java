@@ -1,4 +1,4 @@
-package Editor;
+package EditorNoCommand;
 
 public enum Orientation {
     NORTH("WEST","EAST"), 

@@ -1,8 +1,9 @@
-package Editor;
+package EditorWithCommand;
 
+import CommandPattern.Target;
 import Math.Vec3;
 
-public class Editor {
+public class Editor extends Target {
     public enum Blocks {
         START,
         ROAD, 
@@ -17,8 +18,8 @@ public class Editor {
         blocks = new Block[size.x()][size.y()][size.z()];
     }
 
-	public void addBlock(Blocks block, Orientation orientation, Vec3 vec3) {
-        blocks[vec3.x()][vec3.y()][vec3.z()] = new Block(block, orientation, vec3);
+	public void addBlock(Block block, Vec3 vec3) {
+        blocks[vec3.x()][vec3.y()][vec3.z()] = block;
 	}
 
 	public Block getBlockAt(Vec3 vec3) {

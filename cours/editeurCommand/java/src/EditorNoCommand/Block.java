@@ -1,6 +1,6 @@
-package Editor;
+package EditorNoCommand;
 
-import Editor.Editor.Blocks;
+import EditorNoCommand.Editor.Blocks;
 import Math.Vec3;
 
 public class Block {

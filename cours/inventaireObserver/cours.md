@@ -285,7 +285,7 @@ public class Main {
 }
 ```
 
-# Pistes d'améliorations
+# Pistes d'amélioration
 Le code que je vous propose ici n'est pas parfait, et il est encore loin des standards de qualité dans la plupart des studios … Voyons donc ce que vous pouvez essayer de faire pour l'améliorer :
 
 - Mettre tous les items du jeu dans une liste pour pouvoir y accéder plus proprement

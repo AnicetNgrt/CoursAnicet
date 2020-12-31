@@ -8,7 +8,7 @@ Dans ce repository tu as accès à tous mes cours au format écrit, que j'ai eu 
 
 1. `12/12/2020 21:30` [Les Shaders](./cours/shaders/cours.md)
 2. `17/12/2020 21:00` [Un système d'inventaire avec l'Observer pattern](./cours/inventaireObserver/cours.md)
-3. `Work in progress` [Un éditeur de map avec le Command Pattern](./cours/editeurCommand/cours.md)
+3. `26/12/2020 21:00` [Un éditeur de map avec le Command Pattern](./cours/editeurCommand/cours.md)
 
 # Hors-série
 

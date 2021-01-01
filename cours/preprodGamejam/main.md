@@ -217,7 +217,7 @@ Maintenant que le gros morceau des moteurs est passé, penchons nous sur des out
 - création de shaders : Shadertoy
 
 ## Les ressources
-Vous allez aussi avoir besoin de quelques ressources supplémentaires, car je doute que vous ne fassiez tout dans votre projet. Voici quelques liens utiles pour trouver des ressources libres de droit (attention aux licences, ça peut devenir compliqué, renseignez vous bien sur chaque site) :
+Vous allez aussi avoir besoin de quelques ressources supplémentaires, car je doute que vous ne fassiez tout dans votre projet. Voici quelques liens utiles pour trouver des ressources libres de droits (attention aux licences, ça peut devenir compliqué, renseignez vous bien sur chaque site).
 
 - Ressources de tout type : [OpenGameArt](https://opengameart.org/), [Kenney](https://www.kenney.nl/)
 - Musiques

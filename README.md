@@ -1,7 +1,7 @@
 # Cours de création de jeux
  Depuis 4 ans j'ai appris pas mal de choses sur presque toutes les étapes de création d'un jeu (sans trop de budget) au travers de la création de mes propres jeux, seul ou en petite équipe.
 
-Dans ce repository tu as accès à tous mes cours au format écrit. J'ai eu l'occasion de présenter la plupart un petit groupe d'élèves du DUT Informatique lors de visioconférences, le cas échéant aux dates mentionnées avant chaque lien.
+Dans ce repository tu as accès à tous mes cours au format écrit. J'ai eu l'occasion de présenter la plupart à un petit groupe d'élèves du DUT Informatique lors de visioconférences, le cas échéant aux dates mentionnées avant chaque lien.
 
 # Programmation
 

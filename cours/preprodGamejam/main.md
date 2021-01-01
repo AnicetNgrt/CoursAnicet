@@ -36,7 +36,7 @@ Trouver une idée de jeu, c'est très difficile. Il faut beaucoup d'expérience 
 
 La capacité à travailler et la motivation dépend de chacun, mais une bonne manière de ne pas s'engager dans un projet trop difficile est de calculer le temps maximum qu'on pourrait raisonnablement donner dans le meilleur des cas.
 
-Ici on a un mois, composé de 4 semaines. On part du principe qu'on travaille lentement les 3 premières semaines et que comme tout bon procrastinateur et qu'on s'y met généralement à fond la dernière semaine. Même si ce genre de comportement n'est pas une fatalité et est généralement à éviter si vous ne voulez pas vous retrouver à "crunch", à chacun d'être lucide sur sa propre nature.
+Ici on a un mois, composé de 4 semaines. On part du principe qu'on travaille lentement les 3 premières semaines et que, comme tout bon procrastinateur, on s'y met généralement à fond la dernière semaine. Même si ce genre de comportement n'est pas une fatalité et est généralement à éviter si vous ne voulez pas vous retrouver à "crunch", à chacun d'être lucide sur sa propre nature.
 
 Personnellement, je travaille 4h max le samedi sur mes jeux et 8h max le dimanche. En semaine je travaille 1h30 max en moyenne par soir.
 

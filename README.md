@@ -24,7 +24,7 @@ Je suis Anicet Nougaret, un étudiant de 19 ans en DUT Informatique à Paris. Je
 
 En 2020 avec le virus et en voyant les 1ère années de mon DUT galérer à trouver du soutien ou des connexions sociales, j'ai décidé de m'investir dans un club de création de jeux de mon IUT. Je propose des cours écrits et en visioconférence de façon hebdomadaire.
 
-Pour toute question ou contact, [voici mon mail](an.nougaret@gmail.com)
+Pour toute question ou contact, voici mon mail : <an.nougaret@gmail.com>
 
 ## Mes jeux
 Vous pouvez voir les jeux que j'ai crée sur [ma page Itch.io](https://anicetngrt.itch.io/) !

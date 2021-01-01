@@ -1,4 +1,5 @@
 [Retour à la page principale](../../README.md)
+[Code source d'exemple](https://github.com/Club-Jeux-Video/CoursAnicet/tree/main/cours/editeurCommand/java)
 
 # Le Command Pattern
 Cette fois-ci, c'est au tour d'un autre Design Pattern, nommé le "Command Pattern". Ce pattern permet d'encoder et de stocker dans des variables les actions et les transformations susceptibles d'êtres annullées, répétées ou copiées un nombre arbitraire de fois. Ce qui permet de coder l'action "Undo" (le fameux ctrl+z) et "Redo" (souvent un ctrl+y) dans un logiciel, comme un éditeur de texte, un photoshop-like, ou tout simplement un éditeur de map dans un jeu vidéo. Il permet aussi d'encoder la liste des actions successives entreprises par l'utilisateur, afin de les rejouer plus tard (fonctionnalité d'enregistrement de partie), de les envoyer sur le réseau (jeu en ligne), ou de les sauvegarder en mémoire.
@@ -285,4 +286,5 @@ Les autres classes de notre projet pourront appeler les méthodes de `MapEditor`
 - Créer un enum ou des instances constantes d'une classe `TypeBloc` pour les types de blocs plutôt que des `String` comme `"VIDE"` ou `"ROUTE"` afin d'étendre les fonctionnalités de nos blocs et de les documenter.
 
 —
+[Code source d'exemple](https://github.com/Club-Jeux-Video/CoursAnicet/tree/main/cours/editeurCommand/java)
 [Retour à la page principale](../../README.md)

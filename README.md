@@ -1,4 +1,3 @@
-# Cours de création de jeux
  Depuis 4 ans j'ai appris pas mal de choses sur presque toutes les étapes de création d'un jeu (sans trop de budget) au travers de la création de mes propres jeux, seul ou en petite équipe.
 
 Sur ce site tu as accès à tous mes cours de programmation de jeux au format écrit ainsi qu'à des liens vers des codes sources d'exemple. J'ai eu l'occasion de présenter la plupart à un petit groupe d'élèves du DUT informatique lors de visioconférences, le cas échéant aux dates mentionnées avant chaque lien.

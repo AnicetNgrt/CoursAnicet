@@ -20,13 +20,13 @@ D'ailleurs, si vous êtes touché par ce genre de "malédiction des projets jama
 
 Une game jam, c'est une évènement qui dure couramment entre 2 jours et 1 mois, où plusieurs équipes (ou créateurs solitaires) doivent créer le meilleur jeu dans le temps imparti et selon un thème donné au début.
 
-C'est un excellent exercice qui vous permet de vous lancer dans le milieu de la création de jeu amateur. Si vous n'avez pas le temps ni l'envie de vous lancer dans un projet trop ambitieux, la game jam est la solution, de part son format réduit et simplifié.
+C'est un excellent exercice qui vous permet de vous lancer dans le milieu de la création de jeux. Si vous n'avez pas le temps ni l'envie de vous lancer dans un projet trop ambitieux, la game jam est la solution, de part son format réduit et simplifié.
 
-Ici on prendra le contexte d'une game jam pour ne pas perdre trop de temps, mais dans un vrai projet (qui pourrait durer des années) la préproduction est aussi importante et vous auriez beaucoup plus de choses à faire.
+Ici, on prendra le contexte d'une game jam pour ne pas perdre trop de temps, mais dans un vrai projet (qui pourrait durer des années) la préproduction est aussi importante et vous auriez beaucoup plus de choses à faire.
 
 # Scénario imaginaire
 
-Ici on va partir du principe que vous participez à une game jam sur le site [Itch.io](https://itch.io) ayant pour thème "Rise and Fall" et commme durée un mois.
+Ici on va partir du principe que vous participez à une game jam sur le site [Itch.io](https://itch.io) ayant pour thème "Rise and Fall" et ayant comme durée un mois.
 
 # Trouver une idée
 

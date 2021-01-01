@@ -2,7 +2,7 @@
 [Code source d'exemple](https://github.com/Club-Jeux-Video/CoursAnicet/tree/main/cours/editeurCommand/java)
 
 # Le Command Pattern
-Cette fois-ci, c'est au tour d'un autre Design Pattern, nommé le "Command Pattern". Ce pattern permet d'encoder et de stocker dans des variables les actions et les transformations susceptibles d'êtres annullées, répétées ou copiées un nombre arbitraire de fois. Ce qui permet de coder l'action "Undo" (le fameux ctrl+z) et "Redo" (souvent un ctrl+y) dans un logiciel, comme un éditeur de texte, un photoshop-like, ou tout simplement un éditeur de map dans un jeu vidéo. Il permet aussi d'encoder la liste des actions successives entreprises par l'utilisateur, afin de les rejouer plus tard (fonctionnalité d'enregistrement de partie), de les envoyer sur le réseau (jeu en ligne), ou de les sauvegarder en mémoire.
+Cette fois-ci, c'est au tour d'un autre Design Pattern, nommé le "Command Pattern". Ce pattern permet d'encoder et de stocker dans des variables les actions et les transformations susceptibles d'êtres annulées, répétées ou copiées un nombre arbitraire de fois. Ce qui permet de coder l'action "Undo" (le fameux ctrl+z) et "Redo" (souvent un ctrl+y) dans un logiciel, comme un éditeur de texte, un photoshop-like, ou tout simplement un éditeur de map dans un jeu vidéo. Il permet aussi d'encoder la liste des actions successives entreprises par l'utilisateur, afin de les rejouer plus tard (fonctionnalité d'enregistrement de partie), de les envoyer sur le réseau (jeu en ligne), ou de les sauvegarder en mémoire.
 
 # Un éditeur de map
 L'implémentation de ce pattern peut être faite de plusieurs manières, plus ou moins strictes et élaborées, donc fixons nous les idées grâce à un exemple.

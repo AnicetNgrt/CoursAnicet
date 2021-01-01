@@ -10,7 +10,7 @@ L'étape de préproduction est tout le travail que vous devez réaliser avant m�
 
 Elle peut comporter plus ou moins d'étapes intermédiaires en fonction de l'ambition de votre projet (concept arts, game design document, prototypes, planning, ciblage marketing ...).
 
-C'est une étape capitale pendant laquelle vous allez tracer la feuille de route de votre projet et lancer la machine. Mais comme dans l'écriture ou le dessein, ce sont toujours les premiers coups de pinceaux qui sont difficiles. C'est pourquoi être au courant de ce que l'on peut faire en préproduction vous aidera à vous lancer dans vos projets sans trop de difficultés.
+C'est une étape capitale pendant laquelle vous allez tracer la feuille de route de votre projet et lancer la machine. Mais comme dans l'écriture ou le dessin, ce sont toujours les premiers coups de pinceaux qui sont difficiles. C'est pourquoi être au courant de ce que l'on peut faire en préproduction vous aidera à vous lancer dans vos projets sans trop de difficultés.
 
 La qualité n'étant pas toujours synonyme de quantité, je vous conseille tout de même de ne pas passer un temps infini en préproduction dans vos propres projets sinon vous ne les finirez jamais.
 

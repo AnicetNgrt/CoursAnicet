@@ -1,4 +1,4 @@
-## Préproduction en Gamejam
+# Préproduction en Gamejam
 
 Dans ce cours on va apprendre à mettre en place un projet de jeu pour une game jam selon les méthodes que j'applique dans ce type de projet. 
 
@@ -143,7 +143,7 @@ Une bonne idée serait d'aller voir d'anciens jeux de game jam pour trouver de l
 
 N'hésitez surtout pas à vous entraîner avant !
 
-# Choisir les outils
+# Préparer le matériel
 Maintenant que vous avez votre idée de jeux, il va falloir établir le "stack technique" de votre jeu. C'est à dire les outils qui vont vous aider à faire votre jeu.
 
 Si vous avez déjà des outils de prédilection, foncez ! Le mieux quand l'on manque de temps comme dans une game jam, c'est de faire avec les outils que l'on connaît déjà.
@@ -170,5 +170,66 @@ Un chouette moteur pour faire de la 3D. Tout y est, il suffit d'apprendre, et ç
 
 Seul gros bémol, le langage de programmation : soit vous partez sur du "visual scripting", du "no code" sans vraiment l'être qui ne fait que ralentir le temps de développement, soit vous partez sur du C++, un langage très rapide mais complexe, vieux et à mon avis moins bien conçu que beaucoup d'autres, et long à maîtriser. Donc soit vous perdez votre temps à coder des choses simples, soit vous perdez votre temps à coder des choses compliquées, à vous de choisir.
 
-### 
+Mais comme dans tous les moteurs, si le langage ne vous plaît pas, il existe souvent des "bindings" pour coder dans d'autres langages sans perdre en fonctionnalités. La documentation sera juste plus formelle et vous devrez suivre les tutoriels en activant le traducteur dans votre tête pour essayer d'utiliser les mêmes fonctionnalités depuis vos bindings customisés.
+
+### Godot Engine
+Mon petit favori. Open source (bon à priori ça changera rien pour 99% des gens), très léger, facile d'utilisation, intuitif (pour moi). Bref il est simple et propre, pour les game jams il est très populaire car il permet de faire des jeux très rapidement grâce à son design bien rodé et son langage assez simple. La documentation est bien faite et même si l'on n'a pas autant de fonctionnalités qu'ailleurs, il peut faire un peu de tout.
+
+Mais si vous comptez faire de la 3D réaliste ou un jeu plus avancé que ça, passez votre chemin, attendez un an que la 4.0 sorte et que la plupart des soucis soient corrigés. Le langage (une sorte de Python/Javascript qui s'appelle GDscript) est un peu bancal, même si c'est toujours mieux que de tout faire en C++ ou en "visual scripting". De nombreux bindings de qualité existent pour le C# et le Rust, mais si vous ne savez pas vous servir du moteur ils ne sont pas encore assez bien documentés pour les débutants.
+
+Si vous débutez dans la création de jeux et que vous voulez un moteur de jeu qui a de l'avenir et qui est simple à apprendre foncez. Sinon je vous conseille de choisir entre les deux autres du dessus.
+
+### D'autres moteurs à essayer
+
+- Game Maker Studio (cher et limité à la 2D, mais paradoxalement populaire)
+- Construct 3 (le meilleur moteur 2D avec du "no code" et une bonne compatibilité web)
+- Defold engine (il a bonne réputation mais je ne le connais pas bien. Il me donne juste l'impression d'être Godot, mais moins abouti et limité à la 2D)
+
+### À propos des "Librairies graphiques"
+Si vous cherchez un moteur pour un langage en particulier, disons Java ou Javascript, vous allez tomber sur des "moteurs" mais sans interfaces. Ce sont en faite des "librairies graphiques" avancées qui permettent aussi d'avoir du son, de gérer les touches utilisateurs et d'exporter sur divers plateformes.
+
+À moins que vous soyez prêts à tout pour ne pas quitter votre langage de rêve (ce qui est dommage à mon avis), ou à moins que vous ayez une idée de structuration de votre projet très bien fixée, appuyée par une bonne maîtrise des design patterns relatifs au jeu vidéo, en bref, que vous soyez un pro, passez votre chemin pour les game jams. Sans interfaces et outils avancés, ces "moteurs de jeux" vous demanderont de tout faire grâce au code et grâce à des fichiers de configuration, ce qui peut vraiment ralentir le développement.
+
+Dans le cas où ça vous tenterais, vérifiez qu'il est possible de faire du "hot reload", c'est à dire de voir votre jeu changé en live lorsque vous changez quelque chose dans le code afin de le développer plus facilement.
+
+## Les outils
+Maintenant que le gros morceau des moteurs est passé, penchons nous sur des outils gratuits ou payants dont vous pourriez avoir besoin :
+
+### Son
+- édition de bruitages : Audacity
+- composition de chiptunes : Bosca Ceoil (je ne m'y connais pas bien en composition, demandez à un pro)
+
+### 2D art
+- photoshop-like : Krita (plus orienté dessin) ou Gimp (plus orienté édition d'images)
+- pixelart : Aseprite, GraphicsGale, Piskel
+- animation automatique de pixelart : Juice FX
+
+### 3D
+- modélisation et animation : Blender (on peut tout faire avec aujourd'hui)
+- création de personnages humanoides : Fuse character creator
+- bibliothèque d'animations : Mixamo
+- édition de matériaux : Substance Painter (cher) ou Material Maker
+
+### Autres
+- écrire en markdown : Zettlr (je m'en sers pour écrire les cours actuellement) ou Typora
+- gérer les taches dans un projets : Kanboard ou Trello
+- addon blender pour faire la 3D pixelart : Sprytile
+- création de shaders : Shadertoy
+
+## Les ressources
+Vous allez aussi avoir besoin de quelques ressources supplémentaires, car je doute que vous ne fassiez tout dans votre projet. Voici quelques liens utiles pour trouver des ressources libres de droit (attention aux licences, ça peut devenir compliqué, renseignez vous bien sur chaque site) :
+
+- Ressources de tout type : [OpenGameArt](https://opengameart.org/), [Kenney](https://www.kenney.nl/)
+- Musiques
+    - Tout type : [Liborio Conti](https://no-copyright-music.com/) [FreeMusicArchive](https://freemusicarchive.org/search) 
+    - Musique classique (attention, la composition et l'enregistrement doivent tous les deux être libre de droits) : [Musopen](https://musopen.org/) 
+    - Voir sur youtube et soundcloud, vous en trouverez un paquet
+
+# Se lancer
+Maintenant c'est à vous de prendre tout ce que je viens de vous donner et de lancer votre projet. 
+
+Gardez quelques idées assez génériques de jeu en tête (FPS, platformer, stratégie ...) et essayez de les faire partiellement avant la game jam pour vous entraîner. Si vous êtes perdus, suivez des tutoriels qui expliquent comment les réaliser à partir du moteur que vous avez choisi. 
+
+N'hésitez pas à mettre en place les outils et les ressources avant que le thème ne soit révélé. Testez régulièrement votre jeu lors de sa création et n'oubliez pas de vous amuser !
+
 

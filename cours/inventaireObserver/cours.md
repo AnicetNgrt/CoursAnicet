@@ -1,4 +1,5 @@
 [Retour à la page principale](../../README.md)
+
 [Code source d'exemple](https://github.com/Club-Jeux-Video/CoursAnicet/tree/main/cours/inventaireObserver/code%20en%20java)
 
 # Un système d'inventaire
@@ -299,5 +300,7 @@ Le code que je vous propose ici n'est pas parfait, et il est encore loin des sta
 Maintenant c'est à vous de jouer !
 
 —
+
 [Code source d'exemple](https://github.com/Club-Jeux-Video/CoursAnicet/tree/main/cours/inventaireObserver/code%20en%20java)
+
 [Retour à la page principale](../../README.md)

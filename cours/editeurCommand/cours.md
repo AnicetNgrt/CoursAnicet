@@ -1,4 +1,5 @@
 [Retour à la page principale](../../README.md)
+
 [Code source d'exemple](https://github.com/Club-Jeux-Video/CoursAnicet/tree/main/cours/editeurCommand/java)
 
 # Le Command Pattern
@@ -286,5 +287,7 @@ Les autres classes de notre projet pourront appeler les méthodes de `MapEditor`
 - Créer un enum ou des instances constantes d'une classe `TypeBloc` pour les types de blocs plutôt que des `String` comme `"VIDE"` ou `"ROUTE"` afin d'étendre les fonctionnalités de nos blocs et de les documenter.
 
 —
+
 [Code source d'exemple](https://github.com/Club-Jeux-Video/CoursAnicet/tree/main/cours/editeurCommand/java)
+
 [Retour à la page principale](../../README.md)

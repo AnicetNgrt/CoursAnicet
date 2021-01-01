@@ -235,4 +235,5 @@ Gardez quelques idées assez génériques de jeu en tête (FPS, platformer, stra
 N'hésitez pas à mettre en place les outils et les ressources avant que le thème ne soit révélé. Testez régulièrement votre jeu lors de sa création et n'oubliez pas de vous amuser !
 
 —
+
 [Retour à la page principale](../../README.md)

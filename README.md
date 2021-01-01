@@ -1,8 +1,7 @@
 # Cours de création de jeux
+ Depuis 4 ans j'ai appris pas mal de choses sur presque toutes les étapes de création d'un jeu (sans trop de budget) au travers de la création de mes propres jeux, seul ou en petite équipe.
 
-Comme je crée souvent seul des jeux depuis 4 ans, j'ai appris pas mal de choses sur presque toutes les étapes de création d'un jeu.
-
-Dans ce repository tu as accès à tous mes cours au format écrit, que j'ai eu l'occasion de présenter à un petit groupe d'élèves du DUT Informatique lors de visioconférences aux dates mentionnées avant chaque lien.
+Dans ce repository tu as accès à tous mes cours au format écrit. J'ai eu l'occasion de présenter la plupart un petit groupe d'élèves du DUT Informatique lors de visioconférences, le cas échéant aux dates mentionnées avant chaque lien.
 
 # Programmation
 
@@ -12,4 +11,15 @@ Dans ce repository tu as accès à tous mes cours au format écrit, que j'ai eu 
 
 # Hors-série
 
-1. `Work in progress` [Préproduction en Gamejam](./cours/preprodGamejam/main.md)
+1. `prévu le 02/01/2020 à 21:00` [Préproduction en Gamejam](./cours/preprodGamejam/main.md)
+
+# À propos de moi
+Salut !
+
+Je suis Anicet Nougaret, un étudiant de 19 ans en DUT Informatique à Paris. Je développe des petits jeux vidéo depuis l'âge de 16 ans (ce qui n'est clairement pas un record dans le milieu). Passionné par l'Art et la programmation je m'investis beaucoup dans ce domaine pendant mon temps libre, notamment en participant à des Game Jams. 
+
+En 2020 avec le virus et en voyant les 1ère années de mon DUT galérer à trouver du soutien ou des connexions sociales, j'ai décidé de m'investir dans un club de création de jeux déjà présent dans mon IUT à travers des cours écrits et oraux hebdomadaires qui servent notamment à la création de jeu, mais pas que !
+
+## Mes jeux
+
+Vous pouvez voir les jeux que j'ai crée sur [ma page Itch.io](https://anicetngrt.itch.io/) !

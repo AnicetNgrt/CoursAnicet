@@ -26,4 +26,4 @@ En 2020 avec le virus et en voyant les 1ère années de mon DUT galérer à trou
 Pour toute question ou contact, voici mon mail : <an.nougaret@gmail.com>
 
 ## Mes jeux
-Vous pouvez voir les jeux que j'ai crée sur [ma page Itch.io](https://anicetngrt.itch.io/) !
+Vous pouvez voir les jeux que j'ai créés sur [ma page Itch.io](https://anicetngrt.itch.io/) !

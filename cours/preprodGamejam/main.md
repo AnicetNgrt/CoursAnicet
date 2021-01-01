@@ -133,7 +133,7 @@ Si vous arrivez à un effet proche des jeux *Paper Mario*, votre jeu provoquera 
 
 #### D'autres styles que je vous recommande
 
-- FPS retro et enemis en 2D (Doom retro)
+- FPS retro et ennemis en 2D (Doom retro)
 - 2.5D pixelart camera vue de ¾ haut (Octopath Traveller)
 - Vector Art avec couleurs vives et animations exagérées (Thomas Was Alone)
 - Style aquarelle ou style peinture légère et discrète ([Doc Géraud](https://www.youtube.com/watch?v=TFx66SKTs8w))

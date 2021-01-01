@@ -3,7 +3,6 @@
 # Atelier découverte des Shaders
 Aujourd'hui l'on va découvrir les shaders. Ce sont des outils aussi fascinants que complexes qui permettent de créer des effets visuels dans les jeux et aussi au cinéma dans les CGIs.
 
-
 # Qu'est-ce qu'un shader ?
 Un shader est un programme informatique bien particulier qui permet de dessiner à l'écran uniquement à partir du code. C'est à partir de ces programmes que sont construits la quasi-totalité des moteurs de jeux modernes. Les shaders peuvent produire des images très complexes et peuvent être écrits avec des langages variés (mais tous similaires) qui dépendent du moteur de jeu utilisé ou de l'[API graphique](https://www.frandroid.com/hardware/345822_vulkan-a-quoi-sert-nouvelle-api-graphique-joueurs) visée.
 
@@ -14,7 +13,7 @@ Le problème vient plus de la taille de l'image. Lorsque vous faites 60 images p
 
 La solution est d'utiliser le GPU car il possède des milliers de cœurs pas très intelligents mais capables de faire des opérations spécifiques en parallèle. Finie la queue devant le magasin, tous vos pixels peuvent être calculés presque en simultané ! Mais pour coordonner tous ces passages simultanés il faut des programmes très spécifiques tels que les shaders.
 
-Ainsi, les shaders sont des bouts de code exécutés sur tous les cœurs du GPU en même temps. Mais comme chaque cœur est pas super intelligent il faut impérativement que tous les cœurs reçoivent le même shader à un instant T, les mêmes données en entrée, et aient à renvoyer leur résultat de la même façon.
+Ainsi, les shaders sont des bouts de code exécutés sur tous les cœurs du GPU en même temps. Mais comme chaque cœur est pas super intelligent il faut impérativement que tous les cœurs reçoivent le même shader à un instant T, les mêmes données en entrée, et aient à renvoyer leur résultat de la même façon. (En realité ce ne sont pas des coeurs individuels qui "reçoivent" le shader, la réelle répartition du travail est plus complexe a expliquer et dépend aussi de l'architecture du GPU)
 
 Cela implique des techniques assez farfelues pour faire comprendre à chaque cœur où et comment calculer son propre pixel. Mais on ne verra pas ça aujourd'hui car la plupart des outils nous donnent des moyens de le faire sans trop avoir besoin de comprendre. Pour l'instant voyons ce qu'on peut faire de cool avec des shaders.
 

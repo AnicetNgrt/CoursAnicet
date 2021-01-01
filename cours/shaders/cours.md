@@ -1,4 +1,4 @@
-[Retour à la page principale](../README.md)
+[Retour à la page principale](../../README.md)
 
 # Atelier découverte des Shaders
 Aujourd'hui l'on va découvrir les shaders. Ce sont des outils aussi fascinants que complexes qui permettent de créer des effets visuels dans les jeux et aussi au cinéma dans les CGIs.
@@ -139,4 +139,4 @@ N'oubliez pas d'appuyer sur le bouton play en bas à gauche du code pour compile
 - [La doc de shadertoy](https://www.shadertoy.com/howto#q1)
 
 —
-[Retour à la page principale](../README.md)
+[Retour à la page principale](../../README.md)

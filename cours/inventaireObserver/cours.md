@@ -1,4 +1,4 @@
-[Retour à la page principale](../README.md)
+[Retour à la page principale](../../README.md)
 
 # Un système d'inventaire
 Dans ce cours nous allons revoir le polymorphisme et apprendre le Design Pattern "Observer" par le biais d'un inventaire de jeux vidéo, ce qui va aussi nous permettre de réviser le Polymorphisme.
@@ -298,4 +298,4 @@ Le code que je vous propose ici n'est pas parfait, et il est encore loin des sta
 Maintenant c'est à vous de jouer !
 
 —
-[Retour à la page principale](../README.md)
+[Retour à la page principale](../../README.md)

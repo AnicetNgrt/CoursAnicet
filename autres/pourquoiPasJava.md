@@ -3,10 +3,6 @@
 # Pourquoi je ne recommande pas Java pour faire des jeux ?
 Lorsque l'on me demande quel langage je recommanderais pour faire des jeux, je réponds toujours que ça n'a pas d'importance. Le plus important, c'est de savoir ce que l'on veut :
 
-- [Faire tout de A à Z](#Approche)
-- [Utiliser mon langage favori](#Langage)
-- [Faire juste un bon jeu vite et bien](#Je-veux)
-
 # Approche bidouille/hacker
 Si vous êtes un pro de la bidouille, un "hacker" dans l'âme, que vous aimez tout faire en partant de rien (et c'est très bien, il en faut !), je vous conseille d'utiliser un langage assez bas niveau et de vous intéresser aux API graphiques, telles qu'OpenGL ou Vulkan. Des librairies les implémentant existent dans la plupart des langages bas niveau (et un peu plus haut niveau), tels que C, C++, Rust, Java. Mais attention, vous ne sortirez probablement jamais un jeu commercialisable de cette manière si vous êtes seul (même si d'autres l'on fait), car le développement risque d'être très long. Vous devrez utiliser toutes vos connaissances du langage et de l'architecture logicielle afin de recoller toutes les librairies graphiques, sonores, de gestion des input, et moult d'autres, afin de recréer un outil de création de jeu qu'on pourra peut-être comparer à un moteur de jeu moderne. Je ne procède pas comme cela personnellement, je trouve cette approche passionnante et pleine de mérite, mais je souhaite avant tout créer des jeux beaux et amusants, et pour faire ça il y a plus simple.
 

@@ -2,14 +2,14 @@
 L'OOP, ou "Object Oriented Programming" (programmation orientée objet en français) est un paradigme de programmation. C'est à dire une abstraction et une structuration du code particulière servant à simplifier l'expression de certaines logiques.
 
 # Paradigme ?
-Le paradigme de base en programmation est dit "impératif", c'est à dire que l'on programme avec des simples instructions à la suite les unes des autres. Fait ci, puis fait ça, puis fait ci ... Parce que si vous utilisez les langages les plus bas niveau, c'est à dire les plus proches de la machine, donc présentant un niveau d'abstraction bas, alors vous n'avez pas d'autre choix que d'exécuter les actions une à une car la machine ne sait pas faire autrement.
+Le paradigme de base en programmation est dit "impératif", c'est à dire que l'on programme avec des simples instructions à la suite les unes des autres. Fait ci, puis fait ça, puis fait ci ... Parce que si vous utilisez les langages les plus bas niveau comme le langage d'assemblage, alors vous n'avez pas d'autre choix que d'exécuter les actions une à une, car la machine ne sait pas faire autrement.
 
 Le C, par chance, vous laisse faire des `if` des `else` et des `for` ou encore même des `while`, des opérations de `flow control`, mais il n'existe pas de telle chose pour la machine, ce n'est là aussi qu'une abstraction, un tour de passe passe qui vous donne l'illusion que votre code n'est pas linéaire alors qu'en réalité il l'est. 
 
 Ce que fait le C en réalité lorsque l'on écrit `while` ou `if`, ou du moins ce que le code machine compilé à partir du code en C fait, est qu'il change l'adresse mémoire de la prochaine ligne de code à faire exécuter par l'ordinateur. Par exemple, pour le faire boucler sur le même bout de code à l'infini, ou pour lui faire sauter le code après le `if`, car la condition n'est pas satisfaite, histoire d'aller directement vers le code après le `else`.
 
 # Orienté objet
-L'orienté objet est donc un paradigme construit au dessus du paradigme impératif, il permet de simplifier certaines logiques. Mais il est totalement optionnel. De même que le code machine peut faire des boucles sans `while` en changeant l'adresse mémoire de la prochaine ligne, le C, qui n'est pas orienté objet, peut répliquer tous les mécanismes de l'orienté objet, mais c'est plus long et moins élégant.
+L'orienté objet est donc un paradigme construit au dessus du paradigme impératif, il permet de simplifier certaines logiques. Mais il est totalement optionnel. De même que le code machine peut faire des boucles sans `while` en changeant l'adresse mémoire de la prochaine ligne. Le C, qui n'est pas orienté objet, peut répliquer tous les mécanismes de l'orienté objet, mais c'est plus long et moins élégant.
 
 L'orienté objet consiste en son cœur à relier fortement les données et les fonctions qui modifient ces données.
 
@@ -35,7 +35,7 @@ void sphere_tourner(Sphere *sphere, float rotation) {
 }
 ```
 
-Alors qu'avec un langage orienté fonction, tel que le Java, on a des "classes", des sortes de `struct` avec des fonctions, sauf que ces fonctions, appelées "méthodes" sont appelée depuis les instances de la classe et sont donc capables de les éditer sans avoir à les réécrire dans le prototype :
+Alors qu'avec un langage orienté objet, tel que le Java, on a des "classes", des sortes de `struct` avec des fonctions, sauf que ces fonctions, appelées "méthodes" sont appelée depuis les instances de la classe et sont donc capables de les éditer sans avoir à les réécrire dans le prototype :
 
 ```java
 public class Sphere {

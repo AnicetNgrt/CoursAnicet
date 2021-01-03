@@ -10,7 +10,7 @@ Si tu es étudiant ou ancien de l'IUT de Paris (anciennement IUT Paris Descartes
 
 # Pré-requis (pour les 1A de DUT informatique)
 
-1. [Notions essentielles de programmation orientée objet Java](./cours/oopEnsentiel/cours.md)
+1. [Notions essentielles de programmation orientée objet Java](./cours/oopEssentiel/cours.md)
 
 # Cours de Programmation
 

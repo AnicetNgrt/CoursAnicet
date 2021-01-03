@@ -194,7 +194,7 @@ boolean est_il_rectangle(Button button) {
 ```
 
 # Conclusion : Quand utiliser l'OOP ?
-Par exemple, quand vous devez répertorier plusieurs types d'objets similaires au même endroit, comme une liste, mais que tous ces objets ont des comportements différents, comme un inventaire dans un jeu vidéo qui contiendrait plusieurs items de types différents par exemple, alors il n'y a pas vraiment d'alternatives à l'héritage. 
+Par exemple, quand vous devez répertorier plusieurs types d'objets similaires au même endroit, comme une liste, mais que tous ces objets ont des comportements différents, comme un inventaire dans un jeu vidéo qui contiendrait plusieurs items de types différents par exemple. Dans ce cas, il n'y a pas vraiment d'alternatives simples à l'héritage. 
 
 Mais la relation d'héritage ne permet pas tout, vous allez toujours avoir besoin de la composition dans beaucoup de cas de figures. Par exemple si vous avez une classe `Level` qui a besoin de pleins d'objets comme un personnage jouable de la classe `Player`, une horloge de la classe `Clock` et des ennemis de la classe `Foe`. Là, clairement vous seriez en train de recréez Mario Bros, mais vous ne seriez pas en train de faire de l'héritage comme Darwin (la comparaison entre l'héritage des classes et l'héritage en génétique est maladroite d'ailleurs, en informatique c'est relativement simple, mais en génétique c'est bien plus compliqué. Encore une preuve que la comparaison entre classes OOP et choses réelles est parfois bancale)
 

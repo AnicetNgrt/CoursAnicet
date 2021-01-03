@@ -138,7 +138,7 @@ int main() {
 }
 ```
 
-En OOP, on crée deux classes : `Rectangle` et `Button` à la place des `struct` en C. Mais au lieu de mettre une référence vers une rectangle dans chaque bouton, on dit que `Button` hérite de `Rectangle` et on obient une classe `Button` qui contient aussi tous les attributs et toutes les méthodes de `Rectangle` comme par magie.
+En OOP, on crée deux classes : `Rectangle` et `Button` à la place des `struct` en C. Mais au lieu de mettre une référence vers une rectangle dans chaque bouton, on dit que `Button` hérite de `Rectangle` et on obtient une classe `Button` qui contient aussi tous les attributs et toutes les méthodes de `Rectangle` comme par magie.
 
 ```java
 public class Rectangle {
@@ -193,6 +193,13 @@ boolean est_il_rectangle(Button button) {
 }
 ```
 
-Cette relation d'héritage ne permet pas tout, vous allez toujours avoir besoin de la composition dans beaucoup de cas de figure. Par exemple si vous avez une classe `Level` qui a besoin de pleins d'objets comme un personnage jouable de la classe `Player`, une horloge de la classe `Clock` et des ennemis de la classe `Foe`. Là, clairement vous recréez Mario Bros, mais vous ne faites pas de l'héritage comme Darwin (la comparaison entre l'héritage des classes et l'héritage en génétique est maladroite d'ailleurs, en informatique c'est relativement simple, mais en génétique c'est bien plus étrange. Encore une preuve que la comparaison entre classe et choses réelles est bancale) 
+# Conclusion : Quand utiliser l'OOP ?
+Par exemple, quand vous devez répertorier plusieurs types d'objets similaires au même endroit, comme une liste, mais que tous ces objets ont des comportements différents, comme un inventaire dans un jeu vidéo qui contiendrait plusieurs items de types différents par exemple, alors il n'y a pas vraiment d'alternatives à l'héritage. 
 
-Quand vous devez répertorier plusieurs types d'objets similaires au même endroit, comme une liste, mais que tous ces objets ont des comportements différents, comme un inventaire dans un jeu vidéo par exemple, il n'y a pas vraiment d'alternatives à l'héritage.
+Mais la relation d'héritage ne permet pas tout, vous allez toujours avoir besoin de la composition dans beaucoup de cas de figures. Par exemple si vous avez une classe `Level` qui a besoin de pleins d'objets comme un personnage jouable de la classe `Player`, une horloge de la classe `Clock` et des ennemis de la classe `Foe`. Là, clairement vous seriez en train de recréez Mario Bros, mais vous ne seriez pas en train de faire de l'héritage comme Darwin (la comparaison entre l'héritage des classes et l'héritage en génétique est maladroite d'ailleurs, en informatique c'est relativement simple, mais en génétique c'est bien plus compliqué. Encore une preuve que la comparaison entre classes OOP et choses réelles est parfois bancale)
+
+De manière générale, essayez de toujours aller au plus lisible et au plus simple, quitte à mélanger les paradigmes ou a ne pas en utiliser certains. Rien de vous oblige à abuser de l'OOP, ou du reste. 
+
+Dans un jeu vous pourriez aussi valoriser la performance contre tout le reste, dans ce cas je vous invite à vous renseigner sur le C++ et sur le "data oriented programming", encore un autre paradigme que le C++ permet d'utiliser facilement en plus de l'OOP qu'il permet déjà de faire de façon plus compliquée que Java à mon goût. Ce dernier permet, dans certains cas, d'être plus performant que l'OOP, mais cela demande plus de temps de conception du code, car chaque utilisation de la mémoire et du processeur devra être gérée minutieusement. 
+
+D'ailleurs, sachez que contrairement au code du moteur, c'est à dire le rendu visuel, le traitement d'image et les calculs physiques, le code de "gameplay", c'est à dire la logique et les règles du jeu, est souvent écrit avec des langages de "scripting". Des langages moins performants mais rapides à utiliser et très souvent orientés objets comme le Java ou le C#.

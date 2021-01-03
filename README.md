@@ -14,7 +14,7 @@ Si tu es étudiant ou ancien de l'IUT de Paris (anciennement IUT Paris Descartes
 
 # Cours hors-série
 
-1. `prévu le 02/01/2020 à 21:00` [Préproduction en Gamejam](./cours/preprodGamejam/main.md)
+1. `02/01/2020 21:00` [Game Jam : Comment démarrer son projet de jeu ?](./cours/preprodGamejam/main.md)
 
 # À propos de moi
 Salut !

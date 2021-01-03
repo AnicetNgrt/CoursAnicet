@@ -1,10 +1,16 @@
- Depuis 4 ans, j'ai appris pas mal de choses sur presque toutes les étapes de création d'un jeu au travers de la création de mes propres jeux, seul ou en petite équipe, sur mon temps libre et avec un budget limité.
+# Cours de programmation de jeux vidéo pour des élèves de DUT informatique
+
+Depuis 4 ans, j'ai appris pas mal de choses sur presque toutes les étapes de création d'un jeu au travers de la création de mes propres jeux, seul ou en petite équipe, sur mon temps libre et avec un budget limité.
 
 Sur ce site, vous avez accès à tous mes cours de programmation de jeux au format écrit, ainsi qu'à des liens vers des codes sources d'exemple. J'ai eu l'occasion de présenter la plupart de ces cours à un petit groupe d'élèves du DUT informatique lors de visioconférences, le cas échéant aux dates mentionnées avant chaque lien.
 
 Les cours de programmation sont principalement en Java. [Ce n'est pas un langage que je recommande pour créer des jeux](./autres/pourquoiPasJava.md), mais il permet une certaine continuité pédagogique avec le DUT informatique. Son fonctionnement est similaire à de nombreux langages populaires dans la création de jeux et les notions vues sont généralement applicables avec plusieurs outils et paradigmes.
 
 Si tu es étudiant ou ancien de l'IUT de Paris (anciennement IUT Paris Descartes) n'hésite pas à nous rejoindre sur Discord <https://discord.gg/uZFnfKp> !
+
+# Pré-requis (pour les 1A de DUT informatique)
+
+1. [Notions essentielles de programmation orientée objet Java](./cours/oopEnsentiel/cours.md)
 
 # Cours de Programmation
 

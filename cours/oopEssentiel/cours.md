@@ -9,9 +9,13 @@ Le C, par chance, vous laisse faire des `if` des `else` et des `for` ou encore m
 Ce que fait le C en réalité lorsque l'on écrit `while` ou `if`, ou du moins ce que le code machine compilé à partir du code en C fait, est qu'il change l'adresse mémoire de la prochaine ligne de code à faire exécuter par l'ordinateur. Par exemple, pour le faire boucler sur le même bout de code à l'infini, ou pour lui faire sauter le code après le `if`, car la condition n'est pas satisfaite, histoire d'aller directement vers le code après le `else`.
 
 # Orienté objet
-L'orienté objet est donc un paradigme construit au dessus du paradigme impératif, il permet de simplifier certaines logiques. Mais il est totalement optionnel. De même que le code machine peut faire des boucles sans `while` en changeant l'adresse mémoire de la prochaine ligne, le C peut répliquer tous les mécanismes de l'orienté objet, mais c'est plus long et moins élégant.
+L'orienté objet est donc un paradigme construit au dessus du paradigme impératif, il permet de simplifier certaines logiques. Mais il est totalement optionnel. De même que le code machine peut faire des boucles sans `while` en changeant l'adresse mémoire de la prochaine ligne, le C, qui n'est pas orienté objet, peut répliquer tous les mécanismes de l'orienté objet, mais c'est plus long et moins élégant.
 
 L'orienté objet consiste en son cœur à relier fortement les données et les fonctions qui modifient ces données.
+
+Pour coder en orienté objet, nous utilisons Java. Pour son installation et son fonctionnement de base je vous invite à suivre [ce guide en entier](http://objis.com/tutoriel-java-n3-telechargement-et-installation-eclipse/).
+
+# Les Classes
 
 Prenons le cas d'une sphère que l'on peut tourner d'un certain angle à l'écran. En C, les fonctions et les données sont séparées, il faut passer une référence de la structure sphère dans les prototypes de chaque fonction qui s'en sert. Et il faut se discipliner à bien utiliser des références afin que ce soit plus performant et à bien mettre la donnée modifiée en premier dans le prototype pour simplifier la lecture :
 
@@ -83,10 +87,12 @@ public static void main(String args[]) {
 
 On a donc un léger gain en lisibilité avec le Java, mais ce n'est pas le cas avec tous les langages orientés objet à ce stade. Là où l'orienté objet devient vraiment intéressant, c'est lorsque l'on utilise les nouvelles relations qu'il introduit, telles que l'héritage.
 
+Mais prenez un peu de temps pour expérimenter avec la création et l'utilisation de classe en Java car c'est déjà beaucoup à digérer.
+
 # Héritage
 L'héritage permet de construire les classes les unes au dessus des autres, comme un jeu de poupées russes, afin de réemployer facilement des comportements et des données communs à plusieurs morceaux du code.
 
-Pour apprendre l'héritage l'on montre souvent des cas de figures totalement farfelus ou rare et qui tendent à donner un côté trop "proche de la réalité" aux classes (qu'on appelle aussi objets), c'est un biais dans lequel il ne faut pas tomber. 
+Pour apprendre l'héritage l'on montre souvent des cas de figures totalement farfelus ou rares et qui tendent à donner un côté trop "proche de la réalité" aux classes (qu'on appelle aussi objets), c'est un biais dans lequel il ne faut pas tomber. 
 
 Les classes peuvent représenter absolument ce que l'on veut : un objet réel comme un animal, un modèle de voiture ou un utilisateur, mais aussi des choses plus abstraites comme un module de fonctionnalités, un type de données mathématiques, un mécanisme obscur d'optimisation du code, ou encore un autre tour de passe passe servant à simplifier d'autres bout du code. Le principal est de s'y retrouver et de rester cohérent et simple, pas de coller à la réalité, ça c'est le job de votre graphiste (quoi que...).
 

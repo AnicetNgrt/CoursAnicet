@@ -8,9 +8,10 @@ Les cours de programmation sont principalement en Java. [Ce n'est pas un langage
 
 Si tu es étudiant ou ancien de l'IUT de Paris (anciennement IUT Paris Descartes) n'hésite pas à nous rejoindre sur Discord <https://discord.gg/uZFnfKp> !
 
-# Pré-requis (pour les 1A de DUT informatique)
+# Pré-requis
+Quelques pré-requis si comme les étudiants de 1ère année de DUT informatique d'avant le 2nd semestre vous n'avez appris que la programmation impérative en C pour l'instant.
 
-1. [Notions essentielles de programmation orientée objet Java](./cours/oopEssentiel/cours.md)
+1. [Programmation orientée objet Java : classes, héritage et limites](./cours/oopEssentiel/cours.md)
 
 # Cours de Programmation
 

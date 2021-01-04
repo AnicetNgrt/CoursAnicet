@@ -85,18 +85,20 @@ public static void main(String args[]) {
 }
 ```
 
-On a donc un léger gain en lisibilité avec le Java, mais ce n'est pas le cas avec tous les langages orientés objet à ce stade. Là où l'orienté objet devient vraiment intéressant, c'est lorsque l'on utilise les nouvelles relations qu'il introduit, telles que l'héritage.
+On a donc un léger gain en lisibilité avec Java, mais ce n'est pas le cas avec tous les langages orientés objet à ce stade. De plus, le code C est vraiment compliqué en comparaison parce que c'est du C, pas parce que le C n'est pas orienté objet. Il y a des langages impératifs comme le C qui font ce genre d'opérations de manière encore plus minimaliste.
+
+Là où l'orienté objet devient vraiment intéressant, c'est lorsque l'on utilise les nouvelles relations qu'il introduit, telles que l'héritage.
 
 Mais prenez un peu de temps pour expérimenter avec la création et l'utilisation de classe en Java car c'est déjà beaucoup à digérer.
 
-# Héritage
-L'héritage permet de construire les classes les unes au dessus des autres, comme un jeu de poupées russes, afin de réemployer facilement des comportements et des données communs à plusieurs morceaux du code.
+# Héritage et polymorphisme
+L'héritage permet de construire les classes les unes au dessus des autres, comme un jeu de poupées russes, afin de réemployer facilement des comportements et des données communs à plusieurs morceaux du code. On dit que c'est du "polymorphisme", mais nous reviendrons là dessus plus tard.
 
 Pour apprendre l'héritage l'on montre souvent des cas de figures totalement farfelus ou rares et qui tendent à donner un côté trop "proche de la réalité" aux classes (qu'on appelle aussi objets), c'est un biais dans lequel il ne faut pas tomber. 
 
-Les classes peuvent représenter absolument ce que l'on veut : un objet réel comme un animal, un modèle de voiture ou un utilisateur, mais aussi des choses plus abstraites comme un module de fonctionnalités, un type de données mathématiques, un mécanisme obscur d'optimisation du code, ou encore un autre tour de passe passe servant à simplifier d'autres bout du code. Le principal est de s'y retrouver et de rester cohérent et simple, pas de coller à la réalité, ça c'est le job de votre graphiste (quoi que...).
+Les classes peuvent représenter absolument ce que l'on veut : un objet réel comme un animal, un modèle de voiture ou un utilisateur, mais aussi des choses plus abstraites comme un module de fonctionnalités, un type de données mathématiques, un mécanisme obscur d'optimisation du code ... Le principal est de s'y retrouver et de rester cohérent et simple, pas de coller à la réalité, ça c'est le job de votre graphiste (quoi que...)
 
-Dans la réalité, cette relation d'héritage revient souvent dans la conception d'interface, et donc aussi dans la conception de mondes virtuels comme les jeux-vidéos. Prenons donc pour exemple une librairie de composants d'interface.
+Dans la réalité, cette relation d'héritage revient souvent dans la conception d'interfaces, et donc aussi dans la conception de mondes virtuels comme les jeux-vidéo. Prenons donc pour exemple une librairie de composants d'interfaces.
 
 Vous avez le composant de base, appelé sobrement `Rectangle` qui est un rectangle coloré qui peut être affiché à l'écran. Il a donc naturellement des coordonnées, une taille, et une couleur. Puis il y a son petit frère, le bouton de la classe `Button`, un rectangle coloré aussi, mais avec du texte dessus et 3 couleurs : la couleur quand il ne se passe rien, la couleur quand la souris passe dessus (hovered state), et la couleur quand il est appuyé (pressed state).
 
@@ -138,7 +140,7 @@ int main() {
 }
 ```
 
-En OOP, on crée deux classes : `Rectangle` et `Button` à la place des `struct` en C. Mais au lieu de mettre une référence vers une rectangle dans chaque bouton, on dit que `Button` hérite de `Rectangle` et on obtient une classe `Button` qui contient aussi tous les attributs et toutes les méthodes de `Rectangle` comme par magie.
+En OOP, on crée deux classes : `Rectangle` et `Button` à la place des `struct` en C. Mais au lieu de mettre une référence vers une instance de `Rectangle` dans chaque bouton, on dit que `Button` hérite de `Rectangle` et on obtient une classe `Button` qui contient aussi tous les attributs et toutes les méthodes de `Rectangle` comme par magie.
 
 ```java
 public class Rectangle {
@@ -166,7 +168,7 @@ public static void main(String[] args) {
 }
 ```
 
-Ce qui est encore plus pratique, est que `button` est simultanément de type `Rectangle` et de type `Button`. Ce qui veut dire qu'on peut le mettre dans une liste de `Rectangle` ou dans une liste de `Button`. Mais lorsqu'on le récupérera depuis une liste de `Rectangle`, il ne sera plus considéré comme un `Button`. En effet, tous les `Button` sont des instances de `Rectangle` car ils en héritent, mais `Rectangle` peut être héritée par n'importe quelle autre classe, donc ce n'est pas nécessairement vrai que toutes les instances de `Rectangle` soient aussi des instances de `Button`. 
+Ce qui est encore plus pratique, est que `button` est simultanément de type `Rectangle` et de type `Button`. Ce qui veut dire qu'on peut le mettre dans une liste de `Rectangle` ou dans une liste de `Button`. Mais lorsqu'on le récupérera depuis une liste de `Rectangle`, il ne sera plus considéré comme un `Button`. En effet, tous les `Button` sont des instances de `Rectangle` car ils en héritent, mais `Rectangle` peut être héritée par n'importe quelle autre classe, donc ce n'est pas nécessairement vrai que toutes les instances de `Rectangle` soient aussi des instances de `Button`. En fait, le "polymorphisme" dont je parlais tout à l'heure désigne cela ; le fait qu'avec l'héritage un objet puisse prendre la forme de plusieurs classes ("poly" ~= plusieurs, "morph" ~= forme, c'est du Grec ancien. PS : Je ne parle pas Grec ancien, je laisse les amateurs de Grec ancien me corriger)
 
 Heureusement, en Java, comme dans plein d'autres langages OOP strictement typés, on peut tester si notre rectangle est bien de type `Button` avec le mot-clé `instanceof`. On peut souvent le caster ensuite dans le type `Button` une fois la vérification effectuée :
 

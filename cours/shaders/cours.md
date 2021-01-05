@@ -20,7 +20,7 @@ Ainsi, les shaders sont des bouts de code exécutés sur tous les cœurs du GPU 
 Cela implique des techniques assez farfelues pour faire comprendre à chaque cœur où et comment calculer son propre pixel. Mais on ne verra pas ça aujourd'hui car la plupart des outils nous donnent des moyens de le faire sans trop avoir besoin de comprendre. Pour l'instant voyons ce qu'on peut faire de cool avec des shaders.
 
 ## Quelques shaders cools
-Les shaders ne servent pas qu'à calculer la couleur de pixels, ils peuvent servir à toute forme de calculs intensifs et répétés. Par exemple calculer le mouvement de milliers de brins d'herbes en fonction du vent, simuler l'érosion à partir de milliers de gouttelettes pour générer des montagnes procéduralement, faire des automates cellulaires...
+Les shaders ne servent pas qu'à calculer la couleur des pixels, ils peuvent servir à toute forme de calculs intensifs et parallélisables. Par exemple calculer le mouvement de milliers de brins d'herbes en fonction du vent, simuler l'érosion à partir de milliers de gouttelettes pour générer des montagnes procéduralement, faire des automates cellulaires...
 
 Pour tous ces calculs existent des types de shaders appropriés comportant des raccourcis et variables d'entrée/sortie adaptées, même si rien ne vous empêche d'utiliser ces variables d'entrée et de sortie pour faire des choses pas vraiment prévues au départ (par exemple encoder dans la couleur de chaque pixel d'une image le taux de joie de milliers de Sims, ou si vous codiez un simulateur de sélection naturelle vous pourriez encoder un booléen "vrai = vivant", "faux = mort" en fonction de si l'intensité du bleu dans la couleur est plus proche de 0 ou de 1).
 

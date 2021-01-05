@@ -1,6 +1,6 @@
 [Retour à la page principale](../../README.md)
 
-# Atelier découverte des Shaders
+# Atelier découverte des shaders
 Aujourd'hui je vais vous faire découvrir les shaders. Ce sont des outils aussi fascinants que complexes qui permettent de créer des effets visuels dans les jeux et dans le cinéma cinéma.
 
 # Qu'est-ce qu'un shader ?
@@ -15,7 +15,7 @@ Le problème vient plus de la taille de l'image. Lorsque vous voulez 60 images p
 
 La solution est d'utiliser le GPU car il possède des milliers de cœurs pas très intelligents mais capables de faire des opérations spécifiques en parallèle. Finie la queue devant le magasin, tous vos pixels peuvent être calculés presque en simultané ! Mais pour coordonner tous ces passages simultanés il faut des programmes très spécifiques tels que les shaders.
 
-Ainsi, les shaders sont des bouts de code exécutés sur tous les cœurs du GPU en même temps. Mais comme chaque cœur est pas super intelligent il faut impérativement que tous les cœurs reçoivent le même shader à un instant T, les mêmes données en entrée, et aient à renvoyer leur résultat de la même façon. (En realité ce ne sont pas des coeurs individuels qui "reçoivent" le shader, la réelle répartition du travail est plus complexe a expliquer et dépend aussi de l'architecture du GPU)
+Ainsi, les shaders sont des bouts de code exécutés sur tous les cœurs du GPU en même temps. Mais comme chaque cœur est un peu plus contraignant qu'un cœur de CPU, il faut impérativement que tous les cœurs reçoivent le même code shader, les mêmes données en entrée, et aient à renvoyer leur résultat de la même façon. (En realité ce ne sont pas des cœurs individuels qui "reçoivent" le shader, la réelle répartition du travail est plus complexe a expliquer et dépend aussi de l'architecture du GPU)
 
 Cela implique des techniques assez farfelues pour faire comprendre à chaque cœur où et comment calculer son propre pixel. Mais on ne verra pas ça aujourd'hui car la plupart des outils nous donnent des moyens de le faire sans trop avoir besoin de comprendre. Pour l'instant voyons ce qu'on peut faire de cool avec des shaders.
 

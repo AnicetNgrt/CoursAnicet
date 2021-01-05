@@ -1,15 +1,17 @@
 [Retour à la page principale](../../README.md)
 
 # Atelier découverte des Shaders
-Aujourd'hui l'on va découvrir les shaders. Ce sont des outils aussi fascinants que complexes qui permettent de créer des effets visuels dans les jeux et aussi au cinéma dans les CGIs.
+Aujourd'hui je vais vous faire découvrir les shaders. Ce sont des outils aussi fascinants que complexes qui permettent de créer des effets visuels dans les jeux et dans le cinéma cinéma.
 
 # Qu'est-ce qu'un shader ?
-Un shader est un programme informatique bien particulier qui permet de dessiner à l'écran uniquement à partir du code. C'est à partir de ces programmes que sont construits la quasi-totalité des moteurs de jeux modernes. Les shaders peuvent produire des images très complexes et peuvent être écrits avec des langages variés (mais tous similaires) qui dépendent du moteur de jeu utilisé ou de l'[API graphique](https://www.frandroid.com/hardware/345822_vulkan-a-quoi-sert-nouvelle-api-graphique-joueurs) visée.
+Un shader est un programme informatique qui peut s'exécuter sur la carte graphique. C'est à partir de ces programmes que sont construits la quasi-totalité des moteurs de jeu modernes. Les shaders peuvent produire des images très complexes et peuvent être écrits avec des langages variés (mais tous similaires) qui dépendent du moteur de jeu utilisé ou de l'[API graphique](https://www.frandroid.com/hardware/345822_vulkan-a-quoi-sert-nouvelle-api-graphique-joueurs) visée.
 
 ## Comment ça marche ?
-La nature du shader est intimement liée au fonctionnement du GPU (= carte graphique). En effet, pour dessiner des choses à l'écran pas besoin d'un langage en particulier ou même du GPU. Il suffit de choisir une couleur par pixel et de les mettre dans un tableau à deux dimensions. Ensuite il suffit d'écrire ce tableau dans un fichier selon un algorithme que l'on peut trouver sur Internet et de lui donner la bonne extension. Eh voilà, on a une image.
+La nature du shader est intimement liée au fonctionnement du GPU (= carte graphique). 
 
-Le problème vient plus de la taille de l'image. Lorsque vous faites 60 images par seconde (ips) au sein d'un moteur de jeu, il faut faire plusieurs calculs pour chaque pixel. Une image de 1920 par 1080 pixels en contient plus de deux millions. Autant dire que si vous faisiez ça sur le CPU (= processeur) qui ne peut faire qu'une seule chose à la fois (en réalité cela dépend du nombre de cœurs), et bien vous devriez faire passer les pixels à la queue leu leu est ça serait beaucoup trop long pour atteindre les 60 ips.
+Normalement, pour dessiner des choses à l'écran pas besoin d'un langage en particulier ou même du GPU. Il suffit de choisir une couleur par pixel et de les mettre dans un tableau à deux dimensions. Ensuite il suffit d'écrire ce tableau dans un fichier selon un algorithme que l'on peut trouver sur Internet et de lui donner la bonne extension. Eh voilà, on a une image.
+
+Le problème vient plus de la taille de l'image. Lorsque vous voulez 60 images par seconde (ips) au sein d'un moteur de jeu, il faut faire plusieurs calculs pour chaque pixel. Une image de 1920 par 1080 pixels en contient plus de deux millions. Autant dire que si vous faisiez ça sur le CPU (= processeur) qui ne peut faire qu'une seule chose à la fois (en réalité cela dépend du nombre de cœurs), et bien vous devriez faire passer les pixels au programme de calcul un à un, et ça serait beaucoup trop long pour atteindre les 60 ips.
 
 La solution est d'utiliser le GPU car il possède des milliers de cœurs pas très intelligents mais capables de faire des opérations spécifiques en parallèle. Finie la queue devant le magasin, tous vos pixels peuvent être calculés presque en simultané ! Mais pour coordonner tous ces passages simultanés il faut des programmes très spécifiques tels que les shaders.
 

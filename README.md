@@ -26,7 +26,7 @@ Quelques pré-requis si comme les étudiants de 1ère année de DUT informatique
 # À propos de moi
 Salut !
 
-Je suis Anicet Nougaret, un étudiant de 19 ans en DUT Informatique à Paris. Je développe des petits jeux vidéo depuis l'âge de 16 ans (ce qui n'est clairement pas un record dans le milieu). Passionné par l'Art et la programmation je m'investis beaucoup dans ce domaine pendant mon temps libre, notamment en participant à des Game Jams. 
+Je suis Anicet Nougaret, un étudiant en DUT Informatique à Paris. Je développe des petits jeux vidéo depuis quelques années. Passionné par l'Art et la programmation je m'investis beaucoup dans ce domaine pendant mon temps libre, notamment en participant à des Game Jams. 
 
 En 2020 avec le virus et en voyant les 1ère années de mon DUT galérer à trouver du soutien ou des connexions sociales, j'ai décidé de m'investir dans un club de création de jeux de mon IUT. Je propose des cours écrits et en visioconférence de façon hebdomadaire.
 

@@ -22,15 +22,3 @@ Quelques pré-requis si comme les étudiants de 1ère année de DUT informatique
 # Cours hors-série
 
 1. `02/01/2020 21:00` [Game Jam : Comment démarrer son projet de jeu ?](./cours/preprodGamejam/main.md)
-
-# À propos de moi
-Salut !
-
-Je suis Anicet Nougaret, un étudiant en DUT Informatique à Paris. Je développe des petits jeux vidéo depuis quelques années. Passionné par l'Art et la programmation je m'investis beaucoup dans ce domaine pendant mon temps libre, notamment en participant à des Game Jams. 
-
-En 2020 avec le virus et en voyant les 1ère années de mon DUT galérer à trouver du soutien ou des connexions sociales, j'ai décidé de m'investir dans un club de création de jeux de mon IUT. Je propose des cours écrits et en visioconférence de façon hebdomadaire.
-
-Pour toutes questions ou contacts, voici mon mail : <an.nougaret@gmail.com>
-
-## Mes jeux
-Vous pouvez voir les jeux que j'ai créés sur [ma page Itch.io](https://anicetngrt.itch.io/) !

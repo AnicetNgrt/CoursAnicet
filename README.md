@@ -6,8 +6,6 @@ Sur ce site, vous avez accès à tous mes cours de programmation de jeux au form
 
 Les cours de programmation sont principalement en Java. [Ce n'est pas un langage que je recommande pour créer des jeux](./autres/pourquoiPasJava.md), mais il permet une certaine continuité pédagogique avec le DUT informatique. Son fonctionnement est similaire à de nombreux langages populaires dans la création de jeux, comme le C#, et les notions vues sont généralement applicables avec plusieurs outils et paradigmes.
 
-Si tu es étudiant ou ancien de l'IUT de Paris (anciennement IUT Paris Descartes) n'hésite pas à nous rejoindre sur Discord <https://discord.gg/uZFnfKp> !
-
 # Pré-requis
 Quelques pré-requis si comme les étudiants de 1ère année de DUT informatique d'avant le 2nd semestre vous n'avez appris que la programmation impérative en C pour l'instant.
 
